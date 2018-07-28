@@ -1,6 +1,5 @@
 function [tra] = diff0(a,b,ori)
-%UNTITLED4 此处显示有关此函数的摘要
-%   此处显示详细说明
+%distinguish 5 kinds of double base and collect them into ori matrix 
 couple=[a b];
 
 if strcmp(couple,'at')==1 | strcmp(couple,'ta')==1
