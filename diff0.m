@@ -1,7 +1,7 @@
 function [tra] = diff0(a,b,ori)
 %distinguish 5 kinds of double base and collect them into ori matrix 
 couple=[a b];
-
+%strcmp means compare two string and return True if they are all same and vice versa
 if strcmp(couple,'at')==1 | strcmp(couple,'ta')==1
     ori(1)=ori(1)+1;
 elseif strcmp(couple,'cg')==1 | strcmp(couple,'gc')==1
@@ -13,6 +13,7 @@ elseif strcmp(couple,'tc')==1 | strcmp(couple,'tt')==1 | strcmp(couple,'cc')==1 
 elseif strcmp(couple,'ac')==1 | strcmp(couple,'tg')==1 | strcmp(couple,'ca')==1 | strcmp(couple,'gt')==1   
     ori(5)=ori(5)+1;
 end
+%avoid varible storage complicit
 tra=ori;
 end
 

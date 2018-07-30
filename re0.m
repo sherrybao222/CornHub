@@ -12,11 +12,16 @@ bb=textscan(fid,'%s');
 fclose(fid);
 target=cell2mat(bb{1});
 target=fliplr(seqrcomplement(target));
-record=[];
+
+
+%record=[];
+%get the two string's length
 len_full=length(full);
 len_target=length(target);
+
 %default parameter
 para=[1,10,20,1];
+
 %for t=1:1:len_full-len_target+1
 %count the energy change in two nucleotide array bind(whether is match or mismatch)
 for t=1:1:2000
