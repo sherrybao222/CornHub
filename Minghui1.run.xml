@@ -44,19 +44,19 @@
   <internal package="biblatex" priority="9" active="0">
     <generic>latex</generic>
     <provides type="dynamic">
-      <file>Minghui.aux</file>
-      <file>Minghui-blx.bib</file>
+      <file>Minghui1.aux</file>
+      <file>Minghui1-blx.bib</file>
     </provides>
     <requires type="dynamic">
-      <file>Minghui.bbl</file>
+      <file>Minghui1.bbl</file>
     </requires>
     <requires type="static">
       <file>blx-dm.def</file>
       <file>blx-compat.def</file>
       <file>blx-bibtex.def</file>
       <file>biblatex.def</file>
-      <file>numeric.bbx</file>
       <file>standard.bbx</file>
+      <file>numeric.bbx</file>
       <file>numeric.cbx</file>
       <file>biblatex.cfg</file>
       <file>english.lbx</file>
@@ -67,23 +67,22 @@
     <cmdline>
       <binary>bibtex</binary>
       <option>-min-crossrefs 2</option>
-      <infile>Minghui</infile>
+      <infile>Minghui1</infile>
     </cmdline>
     <input>
-      <file>Minghui.aux</file>
+      <file>Minghui1.aux</file>
     </input>
     <output>
-      <file>Minghui.bbl</file>
+      <file>Minghui1.bbl</file>
     </output>
     <provides type="dynamic">
-      <file>Minghui.bbl</file>
+      <file>Minghui1.bbl</file>
     </provides>
     <requires type="dynamic">
-      <file>Minghui.aux</file>
-      <file>Minghui-blx.bib</file>
+      <file>Minghui1.aux</file>
+      <file>Minghui1-blx.bib</file>
     </requires>
     <requires type="editable">
-      <file>reference.bib</file>
     </requires>
     <requires type="static">
       <file>biblatex.bst</file>
