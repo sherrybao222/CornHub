@@ -1,11 +1,10 @@
-\section{Brief introduction}
-Modeling is a powerful tool in synthetic biology and engineering. Mmodeling has provided us with an important engineering approach to characterize our pathways and predict their performance, thus helped us with modifying and testing our designing.
+\section{Introduction}
+Modeling is a powerful tool in synthetic biology. It can provide us with an important engineering approach to characterize our pathways quantitatively and predict their performance, thus help us test and modify our design.
 
-Through our model, we hope to gain insight of the gene expression dynamics of our whole circuit. And also we tried to better characterize our parts, analyze our experimental data,and protein transport and concentration changes throughout the whole process. Several tools including ODEs and interpolation are employed.
+Through the dynamic model, we hope to gain insights of the characteristics of our whole circuit's dynamics. Several tools including ODEs and interpolation are employed.
 
 
-\section{Kinetic model}
-\subsection{analysis of the problem}
+\section{Method}
 
 \begin{figure}[h]
 \centering
@@ -13,26 +12,24 @@ Through our model, we hope to gain insight of the gene expression dynamics of ou
 \caption{Schematic diagram of plasmid1}
 \end{figure}
 
-At the beginning, on the plasmid1, the promoter $P_{arsR}$ isn't bound with ArsR, and thus active. And ArsR and $smURFP_l$ are transcribed from the promoter $P_{arsR}$. $smURFP_l$ means leaking expression without the expression of $As^{3+}$.Then ArsR will bind with the promoter $P_{arsR}$ and make it inactive. 
+At the beginning, on the plasmid\#1, the promoter $P_{arsR}$ isn't bound with ArsR, thus it is active. $ArsR$ and $smURFP$ are transcribed and translated under the control of the promoters $P_{arsR_u}$ and $P_{arsR_d}$, with subscript $u$ and $d$ representing upstream and downstream separately. The subscript $l$ of smURFP in the equation means leaky expression without the expression of $As^{3+}$. As ArsR is expressed gradually, it will bind with the promoter $P_{arsR}$ and make it inactive. 
 
 \begin{equation}
 P_{J23104} \stackrel{k_1}{\longrightarrow} P_{J23104}+ArsR
 \end{equation}
-
 \begin{equation}
-P_{arsR} \stackrel{k_2}{\longrightarrow} P_{arsR} +smURFP
+P_{arsR_d} \stackrel{k_2}{\longrightarrow} P_{arsR_d} +smURFP_l
 \end{equation}
 
 \begin{equation}
 ArsR+P_{arsR} \xrightleftharpoons[k_{-3}]{k_3}ArsR*P_{arsR} 
 \end{equation} 
 
-On the plasmid 2, fusion protein of dcas9(dead Cas9, a mutant of Cas9) and RNAP(RNA polymerase) are produced after transcription.
+On the plasmid\#2, the fusion protein of dCas9 and RNAP(RNA polymerase) are produced after transcription and translation, and $sgRNA$ is produced after transcription.
 
 \begin{equation}
-P_{tet} \stackrel{k_{4}}{\longrightarrow} P_{tet} +dCas9-RNAP
+P_{tet} \stackrel{k_{4}}{\longrightarrow} P_{tet} +dCas9*RNAP
 \end{equation}
-
 \begin{equation}
 P_{tet} \stackrel{k_{5}}{\longrightarrow} P_{tet} +sgRNA
 \end{equation}
@@ -43,34 +40,29 @@ P_{tet} \stackrel{k_{5}}{\longrightarrow} P_{tet} +sgRNA
 	\caption{Schematic diagram of dCas9/RNAP}
 \end{figure}
 
-dCas9/RNAP can bind with it's target DNA sequence(upstream of promoter sequence) but not cut it. Simultaneously, dCas9 should have led RNAP to bind to the promoter $P_{arsR_d}$ and enhanced the transcription of GFP. However, the promoter $P_{arsR}$ has already bound with ArsR, as a result, RNAP can't bind with the promoter $P_{arsR}$ . \\ 
+dCas9(*RNAP) can bind with its target DNA sequence without cutting, which is at the upstream of the promoter $P_{arsR_d}$. Simultaneously, dCas9 can lead RNAP to bind with the promoter $P_{arsR_d}$ and enhance the transcription of smURFP. However, because the promoter $P_{arsR_d}$ has already bound with ArsR, as a result, RNAP can't bind with the promoter $P_{arsR_d}$ . \\ 
 
-However, at the presence of $As^{3+}$, $As^{3+}$ can bind with ArsR, then dissociate ArsR and $P_{arsR_d}$, and combine RNAP and $P_{arsR_d}$. \\
+However, at the presence of $As^{3+}$, it can bind with ArsR, then dissociate ArsR and $P_{arsR_d}$, which makes the combination of RNAP and $P_{arsR_d}$ possible. \\
 
-(Declaration: $[dCas9/RNAP] = [dCas9] = [RNAP]$ ; $[P_{arsR_d}] = [P_{arsR_u}] = \frac{1}{2}[P_{arsR}]$ )
+(Declaration: $[dCas9/RNAP] = [dCas9] = [RNAP]$;\\ $[P_{arsR_d}]=[P_{arsR_u}] = \frac{1}{2}[P_{arsR}]$ )
 
 \begin{equation}
 ArsR +As^{3+}\xrightleftharpoons[k_{-6}]{k_6}As^{3+}*ArsR
 \end{equation}
-
 \begin{equation}
 ArsR*P_{arsR} +As^{3+}\xrightleftharpoons[k_{-7}]{k_7}P_{arsR}+ As^{3+}*ArsR
 \end{equation}
-
 \begin{equation}
-dCas9-RNAP+sgRNA\xrightleftharpoons[k_{-8}]{k_8} dCas9-RNAP:sgRNA
+dCas9*RNAP+sgRNA\xrightleftharpoons[k_{-8}]{k_8} dCas9*RNAP:sgRNA
 \end{equation}
-
 \begin{equation}
-dCas9-RNAP:sgRNA+P_{arsR}\xrightleftharpoons[k_{-9}]{k_9} dCas9-RNAP:sgRNA*P_{arsR}
+dCas9*RNAP:sgRNA+P_{arsR_d}\xrightleftharpoons[k_{-9}]{k_9} dCas9*RNAP:sgRNA*P_{arsR_d}
 \end{equation}
-
 \begin{equation}
-dCas9-RNAP:sgRNA*P_{arsR}\stackrel{k_{10}}{\longrightarrow} dCas9-RNAP:sgRNA*P_{arsR}+smURFP
+dCas9*RNAP:sgRNA*P_{arsR_d}\stackrel{k_{10}}{\longrightarrow} dCas9*RNAP:sgRNA*P_{arsR_d}+smURFP
 \end{equation}
-\\\\
-Take the degration into account
-\\\\
+\\
+We then take degradation into account:\\
 \begin{equation}
 ArsR\stackrel{k_{d1}}{\longrightarrow}Ø
 \end{equation}
@@ -89,11 +81,11 @@ As^{3+}*ArsR\stackrel{k_{d4}}{\longrightarrow}As^{3+}
 \end{equation}
 
 \begin{equation}
-dCas9-RNAP\stackrel{k_{d5}}{\longrightarrow}Ø
+dCas9*RNAP\stackrel{k_{d5}}{\longrightarrow}Ø
 \end{equation}
 
 \begin{equation}
-sgRNA\stackrel{k_{d6}}{\longrightarrow}
+sgRNA\stackrel{k_{d6}}{\longrightarrow}Ø
 \end{equation}
 
 %\begin{equation}
@@ -101,7 +93,7 @@ sgRNA\stackrel{k_{d6}}{\longrightarrow}
 %\end{equation}
 
 \begin{equation}
-dCas9-RNAP:sgRNA\stackrel{k_{d7}}{\longrightarrow}Ø
+dCas9*RNAP:sgRNA\stackrel{k_{d7}}{\longrightarrow}Ø
 \end{equation}
 
 %\begin{equation}
@@ -109,7 +101,7 @@ dCas9-RNAP:sgRNA\stackrel{k_{d7}}{\longrightarrow}Ø
 %\end{equation}
 
 \begin{equation}
-dCas9-RNAP:sgRNA*P_{arsR}\stackrel{k_{d8}}{\longrightarrow}P_{arsR}
+dCas9*RNAP:sgRNA*P_{arsR}\stackrel{k_{d8}}{\longrightarrow}P_{arsR}
 \end{equation}
 \\\\
 \begin{table}[htbp]
