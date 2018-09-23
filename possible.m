@@ -1,18 +1,18 @@
-function score = possible(para,target)
+function score = possible(para)
 %this function is transformed from "re0.m" some details can refer to its annotation
 %for this function, it's input is a target array and a specific parameter array
 %full array is a fixed file(don't change in a certain training process)
 %it's output is a score which means the possiblity of cutting
 data_path_1='C:\Users\StargazerSaki\Desktop\model\full.txt';
-%data_path_2='C:\Users\StargazerSaki\Desktop\model\target.txt';
+data_path_2='C:\Users\StargazerSaki\Desktop\model\target.txt';
 fid=fopen(data_path_1,'r');
 bb=textscan(fid,'%s');
 fclose(fid); 
 full=cell2mat(bb{1});
-%fid=fopen(data_path_2,'r');
-%bb=textscan(fid,'%s');
-%fclose(fid);
-%target=cell2mat(bb{1});
+fid=fopen(data_path_2,'r');
+bb=textscan(fid,'%s');
+fclose(fid);
+target=cell2mat(bb{1});
 target=fliplr(seqrcomplement(target));
 record=[];
 len_full=length(full);
