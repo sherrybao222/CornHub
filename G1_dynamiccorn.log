@@ -1,11 +1,10 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.3)  22 SEP 2018 01:43
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (TeX Live 2018/W32TeX) (preloaded format=pdflatex 2018.6.2)  23 SEP 2018 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **G1_dynamiccorn.tex
 (./G1_dynamiccorn.tex
-LaTeX2e <2017-04-15>
-Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
+LaTeX2e <2018-04-01> patch level 5
 ! Undefined control sequence.
 l.1 \section
             {Overview}
@@ -803,9 +802,6 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no l in font nullfont!
 Missing character: There is no e in font nullfont!
-Missing character: There is no â in font nullfont!
-Missing character: There is no € in font nullfont!
-Missing character: There is no ™ in font nullfont!
 Missing character: There is no s in font nullfont!
 Missing character: There is no h in font nullfont!
 Missing character: There is no e in font nullfont!
@@ -1362,6 +1358,11 @@ Missing character: There is no m in font nullfont!
 
 Overfull \hbox (20.0pt too wide) in paragraph at lines 8--12
 []
+ []
+
+
+Overfull \hbox (2.77779pt too wide) in paragraph at lines 8--12
+\OT1/cmr/m/n/10 '
  []
 
 
@@ -2766,11 +2767,15 @@ Missing character: There is no o in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no t in font nullfont!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ˜ in font cmr10!
 
-Overfull \hbox (46.31364pt too wide) detected at line 79
-\OML/cmm/m/it/10 ArsR [] 
+LaTeX Warning: Command \O invalid in math mode on input line 78.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 78.
+
+
+Overfull \hbox (54.09145pt too wide) detected at line 79
+\OML/cmm/m/it/10 ArsR [] \OT1/cmr/m/n/10 ^^_
  []
 
 
@@ -2790,11 +2795,15 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 81--81
 [] 
  []
 
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ˜ in font cmr10!
 
-Overfull \hbox (66.35092pt too wide) detected at line 83
-\OML/cmm/m/it/10 smURFP [] 
+LaTeX Warning: Command \O invalid in math mode on input line 82.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 82.
+
+
+Overfull \hbox (74.12872pt too wide) detected at line 83
+\OML/cmm/m/it/10 smURFP [] \OT1/cmr/m/n/10 ^^_
  []
 
 
@@ -2858,12 +2867,16 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 94--94
 [] 
  []
 
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ˜ in font cmr10!
 
-Overfull \hbox (89.58934pt too wide) detected at line 96
+LaTeX Warning: Command \O invalid in math mode on input line 95.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 95.
+
+
+Overfull \hbox (97.36714pt too wide) detected at line 96
 \OML/cmm/m/it/10 dCas\OT1/cmr/m/n/10 9 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 RN
-AP [] 
+AP [] \OT1/cmr/m/n/10 ^^_
  []
 
 
@@ -2905,12 +2918,16 @@ Overfull \hbox (20.0pt too wide) in paragraph at lines 106--106
 [] 
  []
 
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no ˜ in font cmr10!
 
-Overfull \hbox (132.03365pt too wide) detected at line 108
+LaTeX Warning: Command \O invalid in math mode on input line 107.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 107.
+
+
+Overfull \hbox (139.81145pt too wide) detected at line 108
 \OML/cmm/m/it/10 dCas\OT1/cmr/m/n/10 9 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 RN
-AP \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 sgRNA [] 
+AP \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 sgRNA [] \OT1/cmr/m/n/10 ^^_
  []
 
 
@@ -3300,7 +3317,7 @@ Missing character: There is no h in font nullfont!
 Missing character: There is no ] in font nullfont!
 ! Undefined control sequence.
 l.152 	\includegraphics
-                       [width=10cm,height=5cm]{screenshot003}
+                       [width=10cm,height=5cm]{screenshot003}	
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -3592,7 +3609,7 @@ Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
-[1{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+[1{c:/texlive/2018/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 ! Undefined control sequence.
 <write> \newlabel{tab:test}{{}{\thepage 
                                         }}
@@ -3611,7 +3628,7 @@ and I'll forget about whatever was undefined.
                                                   \fi \@dofilelist \ifdim \f...
 l.165 \end{document}
                     
-(Press Enter to retry, or Control-D to exit)
+(Press Enter to retry, or Control-Z to exit)
 Please type another input file name
 ! Emergency stop.
 \enddocument ...keatletter \@@input \jobname .aux 
@@ -3622,11 +3639,11 @@ l.165 \end{document}
 
  
 Here is how much of TeX's memory you used:
- 17 strings out of 492995
- 267 string characters out of 6132705
- 63074 words of memory out of 5000000
- 3668 multiletter control sequences out of 15000+600000
+ 17 strings out of 492647
+ 280 string characters out of 6133341
+ 65571 words of memory out of 5000000
+ 4000 multiletter control sequences out of 15000+600000
  3640 words of font info for 14 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 18i,7n,12p,798b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 18i,7n,13p,815b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

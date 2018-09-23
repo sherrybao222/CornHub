@@ -1,12 +1,9 @@
-\section{Overview}
+\section{Brief introduction}
 Modeling is a powerful tool in synthetic biology and engineering. Mmodeling has provided us with an important engineering approach to characterize our pathways and predict their performance, thus helped us with modifying and testing our designing.
 
-Basically, the models built by us can be divided into two parts.
+Through our model, we hope to gain insight of the gene expression dynamics of our whole circuit. And also we tried to better characterize our parts, analyze our experimental data,and protein transport and concentration changes throughout the whole process. Several tools including ODEs and interpolation are employed.
 
-On kinetic model parts, we hope to gain insight of the gene expression dynamics of our whole circuit. And also we tried to better characterize our parts, analyze our experimental data,and protein transport and concentration changes throughout the whole process. Several tools including ODEs and interpolation are employed.
 
-\section{Brief introduction}
-Concerned about the pollutions caused by heavy metals released by manufacturers and industries to the environment including air, water and soil and causing great harm to people’s health, we are planning to utilise an engineered microorganism to detect the existence of heavy metals, aiming to develop a novel, highly sensitive and user-friendly detection device. We will engineer and construct detection and reporter circuits into E. coli and utilise CRISPR system to modify the expression of the reporter, smURFP, a kind of fluorescent protein. The change of the level of fluorescence released from smURFP will signal the existence of heavy metals. Our goal is to improve the sensitivity of the device to a great extent to guarantee the practicability and convenience of it.
 \section{Kinetic model}
 \subsection{analysis of the problem}
 
@@ -149,19 +146,116 @@ dCas9-RNAP:sgRNA*P_{arsR}\stackrel{k_{d8}}{\longrightarrow}P_{arsR}
 \subsection{simulation }
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=10cm,height=5cm]{screenshot003}	
+	\includegraphics[width=10cm,height=7cm]{screenshot003}	
 	\caption{reaction map generated from the reaction set above using SimBiology Toolbox}
 \end{figure}
+SimBiology toolbox provides functions for modeling, simulating, and analyzing biochemical pathways on basis of the powerful computing engine of Matlab.
 
 \begin{figure}[h]
 	\centering
-	\includegraphics[width=10cm,height=5cm]{screenshot002}
-	\caption{Schematic diagram of smURFP fluorescence}
+	\includegraphics[width=10cm,height=10cm]{smuRFP}
+	\caption{Schematic diagram of smURFP fluorescence by COPASI}
 \end{figure}
 
 
 
+COPASI is freeware developed withcollaboration of VBI and EMLR. It provides
+almost the same functions as SimBiology, though not quite powerful. But compared with SimBiology, it provides a friendly user interface for model analysis, such as parameter estimation,and parameter scan.
+
+Through the figure, we can see that the smURFP fluorescence gradually increased and then reached a steady state after a period of time  in the presence of arsenic ions.
+
+\section{References} 
+1.Berset, Y. et al. Mechanistic Modeling of Genetic Circuits for ArsR Arsenic Regulation. ACS Synthetic Biology 6, 862–874 (2017).\\
+
+2.Bikard, D.et al. Programmable repression and activation of bacterial gene expression using an engineered CRISPR-Cas system. Nucleic Acids Research 41, 7429–7437 (2013).\\
+
+3.Cai, Y. et al. Modeling the arsenic biosensor system. BMC Systems Biology 1, P83 (2007).\\
+
+4.Pola-López, L. A. et al. Novel arsenic biosensor “POLA” obtained by a genetically modified E. coli bioreporter cell. Sensors and Actuators B: Chemical 254, 1061–1068 (2018).
 
 \end{document}
+
+
+
+The symbol declaration is:\\\\
+$P_{arsR}$: a promoter, which can bind with protein ArsR \\
+$GFP_l$: leaking expression without the expression of $As^{3+}$\\
+$GFP_r$: reporting expression at the presence of $As^{3+}$\\
+\\\\
+
+
+k1 & 1.999e-5 &1/s \\
+k2 & 3.312e-6 &1/s \\
+k3 & 3.3e7    & 1/M    \\
+k-3  \\
+k4 &1.995e-5 &1/s\\
+k5 & 3.312e-6 &1/s \\
+k6 &1.66e7   &1/M  \\
+k-6 \\
+k7  &1.26e4 &1/s  \\
+k-7  \\
+k8&1.6e-2& 1/s\\
+k-8   \\
+k9 &1.66e-5&1/s\\ 
+k-9\\
+k10&4e-5&1/s\\
+kd1 & 3.07e-3&1/s\\
+kd2&1e-5&1/s\\
+kd3&1e-3&1/s\\
+kd4&1.53e-3&1/s\\
+kd5 & 2e-2&1/s\\
+kd6&7.62e-3&1/s\\
+kd7& 1e-2&1/s\\
+kd8&1e-1&1/s\\
+
+\subsection {advanced edition} 
+take the afflux and efflux system into consideration.
+
+\begin{equation}
+GlpF\stackrel{k_{11}}{\longrightarrow}GlpF+As^{3+}
+\end{equation}
+
+\begin{equation}
+ArsB+As^{3+}\stackrel{k_{12}}{\longrightarrow}ArsB
+\end{equation}
+
+
+
+\subsection{solutions and implication}
+
+\begin{equation}
+\frac{d[P_{arsR_u}]}{dt}=-k_1[P_{arsR_u}]\tag{1}
+\end{equation}
+
+\begin{equation}
+\frac{d[ArsR]}{dt}=k_1[P_{arsR_u}]-k_2[P_{arsR}][ArsR]\tag{2}
+\end{equation}
+
+\begin{equation}
+\frac{d[GFP_l]}{dt}=k_1[P_{arsR_u}]\tag{3}
+\end{equation}
+
+\begin{equation}
+\frac{d[ArsR*P_{arsR}]}{dt}=k_2[P_{arsR}][ArsR]-k_4[ArsR*P_{arsR} ][As^{3+}] \tag{4}
+\end{equation}
+
+\begin{equation}
+\frac{d[plasmid2]}{dt}=-k_3[plasmid2]\tag{5}
+\end{equation}
+
+\begin{equation}
+\frac{d[RNAP]}{dt}=k_3[plasmid2]-k_5[P_{arsR_d}][RNAP]\tag{6}
+\end{equation}
+
+\begin{equation}
+\frac{d [RNAP*P_{arsR_d}]}{dt}=k_5[P_{arsR_d}][RNAP]-k_6[RNAP*P_{arsR_d}]\tag{7}
+\end{equation}
+
+\begin{equation}
+\frac{d [GFP_r]}{dt}=k_6[RNAP*P_{arsR_d}]\tag{8}
+\end{equation}
+
+
+
 
 
