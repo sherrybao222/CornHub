@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.3)  23 SEP 2018 22:41
+=======
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.3)  24 SEP 2018 20:14
+>>>>>>> parent of 93b5444... Revert "nothing"
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -560,6 +564,7 @@ File: ot1enc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+2019 (decimal 8217)
    defining Unicode char U+201C (decimal 8220)
    defining Unicode char U+201D (decimal 8221)
+<<<<<<< HEAD
 )
 Now handling font encoding OMS ...
 ... processing UTF-8 mapping file for font encoding OMS
@@ -573,6 +578,21 @@ File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
    defining Unicode char U+2021 (decimal 8225)
    defining Unicode char U+2022 (decimal 8226)
 )
+=======
+)
+Now handling font encoding OMS ...
+... processing UTF-8 mapping file for font encoding OMS
+
+(/usr/local/texlive/2017/texmf-dist/tex/latex/base/omsenc.dfu
+File: omsenc.dfu 2017/01/28 v1.1t UTF-8 support for inputenc
+   defining Unicode char U+00A7 (decimal 167)
+   defining Unicode char U+00B6 (decimal 182)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+2020 (decimal 8224)
+   defining Unicode char U+2021 (decimal 8225)
+   defining Unicode char U+2022 (decimal 8226)
+)
+>>>>>>> parent of 93b5444... Revert "nothing"
 Now handling font encoding OMX ...
 ... no UTF-8 mapping file for font encoding OMX
 Now handling font encoding U ...
@@ -1086,9 +1106,15 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'Minghui1.bbl' not found.
 
 No file Minghui1.bbl.
+<<<<<<< HEAD
 Package biblatex Info: Reference section=0 on input line 54.
 Package biblatex Info: Reference segment=0 on input line 54.
 LaTeX Font Info:    Try loading font information for U+msa on input line 57.
+=======
+Package biblatex Info: Reference section=0 on input line 55.
+Package biblatex Info: Reference segment=0 on input line 55.
+LaTeX Font Info:    Try loading font information for U+msa on input line 58.
+>>>>>>> parent of 93b5444... Revert "nothing"
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
@@ -1098,11 +1124,16 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 57.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Font shape `OT1/iwona/bx/n' in size <9> not available
+<<<<<<< HEAD
 (Font)              Font shape `OT1/iwona/b/n' tried instead on input line 57.
+=======
+(Font)              Font shape `OT1/iwona/b/n' tried instead on input line 58.
+>>>>>>> parent of 93b5444... Revert "nothing"
 
 (./G1_dynamiccorn.tex
 LaTeX Font Info:    Font shape `OT1/iwona/bx/n' in size <14.4> not available
 (Font)              Font shape `OT1/iwona/b/n' tried instead on input line 1.
+<<<<<<< HEAD
  <1.jpg, id=20, 645.41125pt x 268.00125pt>
 File: 1.jpg Graphic file (type jpg)
  <use 1.jpg>
@@ -1119,17 +1150,57 @@ Package pdftex.def Info: 2.png used on input line 39.
 (pdftex.def)             Requested size: 341.43446pt x 142.26425pt.
 
 Underfull \hbox (badness 10000) in paragraph at lines 43--44
+=======
+LaTeX Font Info:    Font shape `OT1/iwona/bx/n' in size <12> not available
+(Font)              Font shape `OT1/iwona/b/n' tried instead on input line 8.
+ <1.jpg, id=24, 645.41125pt x 268.00125pt>
+File: 1.jpg Graphic file (type jpg)
+ <use 1.jpg>
+Package pdftex.def Info: 1.jpg used on input line 12.
+(pdftex.def)             Requested size: 341.42621pt x 142.2608pt.
 
- []
 
+LaTeX Warning: Citation 'pola2018novel' on page 1 undefined on input line 16.
+
+LaTeX Font Info:    Font shape `OT1/iwona/bx/n' in size <10> not available
+(Font)              Font shape `OT1/iwona/b/n' tried instead on input line 16.
+[1
+
+{/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map} <./1.jpg
+>] <2.png, id=36, 444.15938pt x 239.39438pt>
+File: 2.png Graphic file (type png)
+ <use 2.png>
+Package pdftex.def Info: 2.png used on input line 42.
+(pdftex.def)             Requested size: 341.43446pt x 142.26425pt.
+
+>>>>>>> parent of 93b5444... Revert "nothing"
+
+LaTeX Warning: Citation 'bikard2013programmable' on page 2 undefined on input l
+ine 46.
+
+
+<<<<<<< HEAD
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 46--47
+>>>>>>> parent of 93b5444... Revert "nothing"
 
 Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
+<<<<<<< HEAD
 [2 <./2.png>]
 Overfull \hbox (12.67352pt too wide) detected at line 63
 \OML/cmm/m/it/10 dCas\OT1/cmr/m/n/10 9 \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 RN
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 48--49
+
+ []
+
+[2 <./2.png>]
+Overfull \hbox (9.90372pt too wide) detected at line 70
+\OML/cmm/m/it/10 dCas\OT1/cmr/m/n/10 9 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 RN
+>>>>>>> parent of 93b5444... Revert "nothing"
 AP \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 sgRNA \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/
 10 P[] [] dCas\OT1/cmr/m/n/10 9 \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 RNAP \OT1
 /cmr/m/n/10 : \OML/cmm/m/it/10 sgRNA \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/10 P[] 
@@ -1137,15 +1208,24 @@ AP \OT1/cmr/m/n/10 : \OML/cmm/m/it/10 sgRNA \OMS/cmsy/m/n/10 ^^C \OML/cmm/m/it/
  []
 
 
+<<<<<<< HEAD
 LaTeX Warning: Command \O invalid in math mode on input line 67.
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
+>>>>>>> parent of 93b5444... Revert "nothing"
 
 
 LaTeX Warning: Command \O invalid in math mode on input line 71.
 
+<<<<<<< HEAD
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 70--74
+>>>>>>> parent of 93b5444... Revert "nothing"
 
 LaTeX Warning: Command \O invalid in math mode on input line 84.
 
 
+<<<<<<< HEAD
 LaTeX Warning: Command \O invalid in math mode on input line 88.
 
 
@@ -1153,11 +1233,29 @@ LaTeX Warning: Command \O invalid in math mode on input line 96.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 105--135
+=======
+LaTeX Warning: Command \O invalid in math mode on input line 75.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 79.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 92.
+
+
+LaTeX Warning: Command \O invalid in math mode on input line 104.
+>>>>>>> parent of 93b5444... Revert "nothing"
 
  []
 
+<<<<<<< HEAD
 LaTeX Font Info:    Font shape `OT1/iwona/bx/n' in size <12> not available
 (Font)              Font shape `OT1/iwona/b/n' tried instead on input line 138.
+=======
+Overfull \hbox (32.25928pt too wide) in paragraph at lines 118--142
+ [][] 
+ []
+>>>>>>> parent of 93b5444... Revert "nothing"
 
 <screenshot003.png, id=51, 458.21187pt x 330.73563pt>
 File: screenshot003.png Graphic file (type png)
@@ -1165,6 +1263,10 @@ File: screenshot003.png Graphic file (type png)
 Package pdftex.def Info: screenshot003.png used on input line 141.
 (pdftex.def)             Requested size: 284.53589pt x 199.16455pt.
 
+<<<<<<< HEAD
+=======
+Underfull \hbox (badness 10000) in paragraph at lines 113--143
+>>>>>>> parent of 93b5444... Revert "nothing"
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
@@ -1174,7 +1276,25 @@ File: smuRFP.pdf Graphic file (type pdf)
 Package pdftex.def Info: smuRFP.pdf used on input line 148.
 (pdftex.def)             Requested size: 284.52618pt x 284.52551pt.
 
+<screenshot003.png, id=56, 458.21187pt x 330.73563pt>
+File: screenshot003.png Graphic file (type png)
+ <use screenshot003.png>
+Package pdftex.def Info: screenshot003.png used on input line 149.
+(pdftex.def)             Requested size: 284.53589pt x 199.16455pt.
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<smuRFP.pdf, id=57, 597.23125pt x 845.1575pt>
+File: smuRFP.pdf Graphic file (type pdf)
+ <use smuRFP.pdf>
+Package pdftex.def Info: smuRFP.pdf used on input line 156.
+(pdftex.def)             Requested size: 284.52618pt x 284.52551pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+<<<<<<< HEAD
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
@@ -1230,4 +1350,72 @@ PDF statistics:
  105 compressed objects within 2 object streams
  33 named destinations out of 1000 (max. 500000)
  53 words of extra memory for PDF output out of 10000 (max. 10000000)
+=======
+)
+
+LaTeX Warning: Empty bibliography on input line 70.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
+[3] [4] [5 <./screenshot003.png> <./smuRFP.pdf>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
+ (./Minghui1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
+
+
+Package rerunfilecheck Warning: File `Minghui1.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Minghui1.out':
+(rerunfilecheck)             Before: 000782501AC4CA93E332C9590B2BA830;276
+(rerunfilecheck)             After:  ACAB53B8AFF75F0E74BFFEAA2D16BF7B;287.
+
+LaTeX Warning: There were undefined references.
+
+
+Package biblatex Warning: Please (re)run BibTeX on the file(s):
+(biblatex)                Minghui1
+(biblatex)                and rerun LaTeX afterwards.
+
+Package logreq Info: Writing requests to 'Minghui1.run.xml'.
+\openout1 = `Minghui1.run.xml'.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
+ ) 
+Here is how much of TeX's memory you used:
+ 17209 strings out of 492995
+ 277217 string characters out of 6132705
+ 579407 words of memory out of 5000000
+ 20490 multiletter control sequences out of 15000+600000
+ 42713 words of font info for 67 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 42i,14n,40p,934b,1080s stack positions out of 5000i,500n,10000p,200000b,80000s
+pdfTeX warning (dest): name{subsection.3.2} has been referenced but does not 
+exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{subsection.3.1} has been referenced but does not ex
+ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{section.3} has been referenced but does not exist, 
+replaced by a fixed one
+
+{/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc}</usr/lo
+cal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/loc
+al/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/local
+/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local/t
+exlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/local/texliv
+e/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/2
+017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/20
+17/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/local/texlive/2017
+/texmf-dist/fonts/type1/nowacki/iwona/iwonab.pfb></usr/local/texlive/2017/texmf
+-dist/fonts/type1/nowacki/iwona/iwonar.pfb>
+Output written on Minghui1.pdf (5 pages, 258272 bytes).
+PDF statistics:
+ 137 PDF objects out of 1000 (max. 8388607)
+ 111 compressed objects within 2 object streams
+ 36 named destinations out of 1000 (max. 500000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
+>>>>>>> parent of 93b5444... Revert "nothing"
 

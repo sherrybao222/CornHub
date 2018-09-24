@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 \BOOKMARK [1][-]{section.1}{Introduction}{}% 1
 \BOOKMARK [1][-]{section.2}{Method}{}% 2
 \BOOKMARK [2][-]{subsection.2.1}{simulation }{section.2}% 3
 \BOOKMARK [1][-]{section.3}{References}{}% 4
+=======
+\BOOKMARK [1][-]{section.1}{Brief introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Kinetic model}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{analysis of the problem}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{simulation }{section.2}% 4
+\BOOKMARK [0][-]{figure.caption.5}{Bibliography}{}% 5
+>>>>>>> parent of 93b5444... Revert "nothing"
