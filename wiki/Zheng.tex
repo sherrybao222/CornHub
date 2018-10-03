@@ -55,8 +55,7 @@
 	\maketitle
 
 	\begin{abstract}
-	Our model aims to find the intricate reason in gene cleaving behavior and find efficient method to enhance the genome-editing tools reliability, i.e. reducing the off-targeting possibility.
-	The basic knowledges of this model are mostly simple probability and dynamic deduction, which make our model both convincing and pellucid.
+	Our model aims to investigate the off-target problem in gene editing by the CRISPR-Cas system, therefore finding efficient ways to enhance the reliability of gene editing. The foundations of this model are mostly simple probability theory and dynamic deduction, which make our model both convincing and pellucid.
 	\end{abstract}
 	
 	%\input{miscorn_intro.tex}
@@ -67,7 +66,7 @@
 	\printbibliography
 	%\chapter{existing model}
 	\section{Introduction}
-	In the appearing researching, people have construction similar model as illustrating in the following figure (Figure.1). There are four common rules when cas nuclease cleave the DNA \parencite{KLEIN20181413} 
+	Currently, people have constructed a similar model as illustrated in the following figure (Figure 1). There are four common rules when Cas nuclease cleaves the DNA \parencite{KLEIN20181413} 
 	.
 		\begin{figure}[tbph]
 		\centering
@@ -76,16 +75,23 @@
 		\label{fig:1}
 		\end{figure}
 
-	(1) seed region: single mismatches within a PAM proximal seed region can completely disrupt interference\par
-	(2) mismatch spread: when mismatches are outside the seed region, off targets with spread out mismatches are targeted most strongly\par
-	(3) differential binding versus differential cleavage: binding is more tolerant to mismatches than cleavage\par 
-	(4) specificity-efficiency decoupling: weakened protein-DNA interactions can improve target selectivity while still maintaining efficiency\par
-	Based on these four rules, possibility theory was applied in to explain it. As we know, there are always only two results in experiment, which are successful cleavage and unsuccessful cleavage. In math view, it can be on-hot encoded and they are corresponding to 1 and 0. To solve it, we may consider it as a cluster problem, however, it is easier to find a quantitative continuous function rather than try hard to find a suitable cluster distance function. Naturally, finding an approximate possibility distribution is a good choice. In many target design toolkits, they have a set of parameters to get a score to evaluate whether it’s good or bad. Here we think the score function has similar ability to possibility which is a description of better or worse and can’t affirm whether successful cleavage appear. Considering this problem, it roots in the question itself because future can’t be predicted. But possibility can. Hence, there we tend to find a function so that we can know what target is better.\par
-	Considering difference between model predicting data and experimental data, our model consists of two aspects, which are kinetic inference and updating module.
-	\section{Model}
+	(1) Seed region: single mismatch(es) within a PAM proximal seed region can completely disrupt interference\par
+	(2) Mismatch spread: when mismatches are outside the seed region, off-targets with spread out mismatches are targeted most strongly\par
+	(3) Differential binding versus differential cleavage: binding is more tolerant of mismatches than cleavage\par 
+	(4) Specificity-efficiency decoupling: weakened protein-DNA interactions can improve target selectivity while still maintaining efficiency\par
+	
+	Based on these four rules, probability theory is applied in to explain it. As we know, there are always only two results in an experiment, which are successful cleavage and unsuccessful cleavage. In math view, it can be one-hot encoded, and they are corresponding to 1 and 0. 
+	
+	To solve this problem, one choice is to consider it as a cluster problem; however, it is easier to find a continuous quantitative function rather than to find a suitable cluster distance function. So naturally, finding an approximate probability distribution is a good choice. 
+	
+	In many target design toolkits, they use a score function with several parameters which can generate a score to evaluate whether the target is good or bad. Here we consider the score function has the similar ability to probability, which is a description of "better" or "worse" while can’t affirm whether successful cleavage will appear. For our case, our goal is to find a function indicating which target is BETTER.
+	
+	Considering the difference between model prediction and experimental data, our model consists of two aspects, which are kinetic inference and an updating module.
+	
+	\section{Models}
 	%	\includegraphics[width=5in]{1.png}
-	\subsection{kinetic model}
-	From the figure.2, this process is begun with binding between PAM and protein. Therefore, it corresponds to rule 1 mentioned before. And with the reaction proceeding, every steps in it are reversible and it’s irreversibility mainly depended on the banding energy of two DNA bases.
+	\subsection{Kinetic model}
+Figure 2 shows that the whole binding-cleavage process begins with the binding between PAM and protein. Therefore, it corresponds to rule 1 mentioned before. And as the reaction proceeds, every step of it is reversible, and its irreversibility mainly depends on the binding energy of two DNA bases.
 	\begin{figure}
 		\centering
 		\includegraphics[width=0.7\linewidth]{2}
@@ -111,8 +117,7 @@
 		\label{fig:5}
 	\end{figure}
 	
-	The boundary probability Pclv;N , representing the probability to cleave staring with a full R-loop and
-	without reducing the R-loop’s length, is given by a simple splitting probability:
+	The boundary probability $P_{clv;N}$ , representing the probability to cleave staring with a full R-loop and without reducing the R-loop’s length, is given by a simple splitting probability:
 	$$P_{clv,N}=\frac{k_f(N)}{k_f(N)+k_b(N)}=\frac{1}{1+\gamma_N} \quad \gamma_N=\frac{k_b(N)}{k_f(N)}$$
 	$$P_{clv} \equiv P_{clv,0} = \frac{1}{1+\sum_{k=1}^N\coprod_{i=1}^n \gamma_i} $$
 	free-energy:$F_i$ ; the transition state energy:$T_i$, from $i$ to $i+1$, we can get the relationship between reaction constant and free energy:
