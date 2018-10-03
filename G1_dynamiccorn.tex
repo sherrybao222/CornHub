@@ -1,7 +1,7 @@
 \section{Introduction}
 Modeling is a powerful tool in synthetic biology. It can provide us with an important engineering approach to characterize our pathways quantitatively and predict their performance, thus help us test and modify our design.
 
-Through the dynamic model, we hope to gain insights of the characteristics of our whole circuit's dynamics. Several tools including ODEs and interpolation are employed.
+Through the dynamic model, we hope to gain insights of the characteristics of our whole circuit's dynamics. Several tools including ordinary differential equations(ODE) and interpolation are employed.
 
 
 \section{Method}
@@ -12,26 +12,25 @@ Through the dynamic model, we hope to gain insights of the characteristics of ou
 \caption{Schematic diagram of plasmid1}
 \end{figure}
 
-At the beginning, on the plasmid\#1, the promoter $P_{arsR}$ isn't bound with ArsR, thus it is active. $ArsR$ and $smURFP$ are transcribed and translated under the control of the promoters $P_{arsR_u}$ and $P_{arsR_d}$, with subscript $u$ and $d$ representing upstream and downstream separately. The subscript $l$ of smURFP in the equation means leaky expression without the expression of $As^{3+}$. As ArsR is expressed gradually, it will bind with the promoter $P_{arsR}$ and make it inactive. \cite{pola2018novel}
+At the beginning, on the plasmid\#1, the promoter P\textsubscript{arsR} isn't bound with ArsR, thus it is active. ArsR and smURFP are transcribed and translated under the control of the promoters P\textsubscript{arsR\textsubscript{u}} and P\textsubscript{arsR\textsubscript{d}}, with subscript u and d representing upstream and downstream separately. The subscript l of smURFP in the equation means leaky expression without the expression of As\textsuperscript{3+}. As ArsR is expressed gradually, it will bind with the promoter P\textsubscript{arsR} and make it inactive. \cite{pola2018novel}
 
 \begin{equation}
-P_{J23104} \stackrel{k_1}{\longrightarrow} P_{J23104}+ArsR
+P\textsubscript{J23104}\stackrel{k_1}{\longrightarrow} P\textsubscript{J23104}+\text{ArsR}
 \end{equation}
 \begin{equation}
-P_{arsR_d} \stackrel{k_2}{\longrightarrow} P_{arsR_d} +smURFP_l
+P\textsubscript{arsR\textsubscript{d}} \stackrel{k_2}{\longrightarrow} P\textsubscript{arsR\textsubscript{d}} +\text{smURFP\textsubscript{l}}
 \end{equation}
-
 \begin{equation}
-ArsR+P_{arsR} \xrightleftharpoons[k_{-3}]{k_3}ArsR*P_{arsR} 
+\text{ArsR}+P\textsubscript{arsR} \xrightleftharpoons[k_{-3}]{k_3}\text{ArsR*P\textsubscript{arsR}}
 \end{equation} 
 
 On the plasmid\#2, the fusion protein of dCas9 and RNAP(RNA polymerase) are produced after transcription and translation, and $sgRNA$ is produced after transcription.
 
 \begin{equation}
-P_{tet} \stackrel{k_{4}}{\longrightarrow} P_{tet} +dCas9*RNAP
+P\textsubscript{tet} \stackrel{k_{4}}{\longrightarrow} P\textsubscript{tet} +\text{dCas9*RNAP}
 \end{equation}
 \begin{equation}
-P_{tet} \stackrel{k_{5}}{\longrightarrow} P_{tet} +sgRNA
+P\textsubscript{tet} \stackrel{k_{5}}{\longrightarrow} P\textsubscript{tet} +\text{sgRNA}
 \end{equation}
 
 \begin{figure}[h]
@@ -40,168 +39,158 @@ P_{tet} \stackrel{k_{5}}{\longrightarrow} P_{tet} +sgRNA
 	\caption{Schematic diagram of dCas9/RNAP}
 \end{figure}
 
-dCas9(*RNAP) can bind with its target DNA sequence without cutting, which is at the upstream of the promoter $P_{arsR_d}$. Simultaneously, dCas9 can lead RNAP to bind with the promoter $P_{arsR_d}$ and enhance the transcription of smURFP. However, because the promoter $P_{arsR_d}$ has already bound with ArsR, as a result, RNAP can't bind with the promoter $P_{arsR_d}$ .\cite{bikard2013programmable} \\ 
+dCas9(*RNAP) can bind with its target DNA sequence without cutting, which is at the upstream of the promoter P\textsubscript{arsR\textsubscript{d}}. Simultaneously, dCas9 can lead RNAP to bind with the promoter P\textsubscript{arsR\textsubscript{d}} and enhance the transcription of smURFP. However, because the promoter P\textsubscript{arsR\textsubscript{d}} has already bound with ArsR, as a result, RNAP can't bind with the promoter P\textsubscript{arsR\textsubscript{d}} \cite{bikard2013programmable}. \\ 
 
-However, at the presence of $As^{3+}$, it can bind with ArsR, then dissociate ArsR and $P_{arsR_d}$, which makes the combination of RNAP and $P_{arsR_d}$ possible. \\
+However, at the presence of As\textsuperscript{3+}, it can bind with ArsR, then dissociate ArsR and P\textsubscript{arsR\textsubscript{d}} , which makes the combination of RNAP and P\textsubscript{arsR\textsubscript{d}} possible. \\
 
-(Declaration: $[dCas9/RNAP] = [dCas9] = [RNAP]$;\\ $[P_{arsR_d}]=[P_{arsR_u}] = \frac{1}{2}[P_{arsR}]$ )
+(Declaration: [dCas9/RNAP] = [dCas9] = [RNAP]; [P\textsubscript{arsR\textsubscript{d}}] = [P\textsubscript{arsR\textsubscript{u}}] = 0.5{[P\textsubscript{arsR}]})
 
 \begin{equation}
-ArsR +As^{3+}\xrightleftharpoons[k_{-6}]{k_6}As^{3+}*ArsR
+\text{ArsR} +\text{As\textsuperscript{3+}}\xrightleftharpoons[k_{-6}]{k_6}\text{As\textsuperscript{3+}*ArsR}
 \end{equation}
 \begin{equation}
-ArsR*P_{arsR} +As^{3+}\xrightleftharpoons[k_{-7}]{k_7}P_{arsR}+ As^{3+}*ArsR
+\text{ArsR*P\textsubscript{arsR}} +\text{As\textsuperscript{3+}}\xrightleftharpoons[k_{-7}]{k_7}\text{As\textsuperscript{3+}*ArsR}
 \end{equation}
 \begin{equation}
-dCas9*RNAP+sgRNA\xrightleftharpoons[k_{-8}]{k_8} dCas9*RNAP:sgRNA
+\text{dCas9*RNAP}+\text{sgRNA}\xrightleftharpoons[k_{-8}]{k_8} \text{dCas9*RNAP:sgRNA}
 \end{equation}
 \begin{equation}
-dCas9*RNAP:sgRNA+P_{arsR_d}\xrightleftharpoons[k_{-9}]{k_9} dCas9*RNAP:sgRNA*P_{arsR_d}
+\text{dCas9*RNAP:sgRNA}+P\textsubscript{arsR\textsubscript{d}}\xrightleftharpoons[k_{-9}]{k_9}\text{dCas9*RNAP:sgRNA*P\textsubscript{arsR\textsubscript{d}}}
 \end{equation}
 \begin{equation}
-dCas9*RNAP:sgRNA*P_{arsR_d}\stackrel{k_{10}}{\longrightarrow} dCas9*RNAP:sgRNA*P_{arsR_d}+smURFP
+P\textsubscript{arsR\textsubscript{d}}\stackrel{k_{10}}{\longrightarrow} P\textsubscript{arsR\textsubscript{d}}+\text{smURFP}
 \end{equation}
 \\
 We then take degradation into account:\\
 \begin{equation}
-ArsR\stackrel{k_{d1}}{\longrightarrow}Ø
+\text{ArsR}\stackrel{k_{d1}}{\longrightarrow}Ø
 \end{equation}
-
 \begin{equation}
-smURFP\stackrel{k_{d2}}{\longrightarrow}Ø
+\text{smURFP}\stackrel{k_{d2}}{\longrightarrow}Ø
 \end{equation}
-
-
 \begin{equation}
-ArsR*P_{arsR}\stackrel{k_{d3}}{\longrightarrow}P_{arsR}
+\text{ArsR*P\textsubscript{arsR}}\stackrel{k_{d3}}{\longrightarrow} P\textsubscript{arsR}
 \end{equation}
-
 \begin{equation}
-As^{3+}*ArsR\stackrel{k_{d4}}{\longrightarrow}As^{3+}
+\text{As\textsuperscript{3+}*ArsR} \stackrel{k_{d4}}{\longrightarrow}\text{As\textsuperscript{3+}}
 \end{equation}
-
 \begin{equation}
-dCas9*RNAP\stackrel{k_{d5}}{\longrightarrow}Ø
+\text{dCas9*RNAP}\stackrel{k_{d5}}{\longrightarrow}Ø
 \end{equation}
-
 \begin{equation}
-sgRNA\stackrel{k_{d6}}{\longrightarrow}Ø
+\text{sgRNA}\stackrel{k_{d6}}{\longrightarrow}Ø
 \end{equation}
-
 %\begin{equation}
 %dCas9-RNAP:sgRNA\stackrel{k_{d7}}{\longrightarrow}dCas9-RNAP
 %\end{equation}
-
 \begin{equation}
-dCas9*RNAP:sgRNA\stackrel{k_{d7}}{\longrightarrow}Ø
+\text{dCas9*RNAP:sgRNA}\stackrel{k_{d7}}{\longrightarrow}Ø
 \end{equation}
-
 %\begin{equation}
 %dCas9-RNAP:sgRNA*P_{arsR}\stackrel{k_{d8}}{\longrightarrow}dCas9-RNAP+P_{arsR}
 %\end{equation}
-
 \begin{equation}
-dCas9*RNAP:sgRNA*P_{arsR}\stackrel{k_{d8}}{\longrightarrow}P_{arsR}
+\text{dCas9*RNAP:sgRNA*P\textsubscript{arsR}}\stackrel{k_{d8}}{\longrightarrow}P\textsubscript{arsR}
 \end{equation}
 \\
 
-We can now consider each reaction(not following the order above). We will use v as an arbitrary variable, simply there to denote a rate of reaction. The r0x notation will be used later in the programming to remove clutter from the code. The several complexes involved:$ArsR*P_{arsR}$ , $As^{3+}*ArsR$, dCas9-RNAP, dCas9*RNAP:sgRNA, $dCas9*RNAP:sgRNA*P_{arsR}$, are respectively abbreviated as $cplx_1$, $cplx_2$, $cplx_3$, $cplx_4$, $cplx_5$.\\
-(1)Production of protein ArsR (r01):
+We can now write each reaction into ODEs (not following the order above). We will use $v$ as an arbitrary variable, simply there to denote a rate of reaction. The "r0x" notation will be used later in the programming to remove clutter from the code. The several complexes involved:ArsR*P\textsubscript{arsR} , As\textsuperscript{3+}*ArsR, dCas9*RNAP, dCas9*RNAP:sgRNA, dCas9*RNAP:sgRNA*P\textsubscript{arsR}, are respectively abbreviated as $cplx_1$, $cplx_2$, $cplx_3$, $cplx_4$, $cplx_5$.\\
+(1) Production of protein ArsR (r01):
 \begin{displaymath}
 v=k_1[P_{J23104}]
 \end{displaymath}
-(2)Degration of ArsR protein (r02):
+(2) Degradation of ArsR protein (r02):
 \begin{displaymath}
 v=-k_{d1}[ArsR]
 \end{displaymath}
-Note that this rate will be negative. This is because it will be decreasing the concentration of the ArsR protein . We can now put them together, to form an ordinary differential equation (ODE) for the rate of change in ArsR protein concentration.
+Note that this rate will be negative. This is because the concentration of ArsR protein will decrease for degradation . We can now put them together, forming an ODE for changing rate of ArsR protein concentration.
 \begin{equation}
 \frac{d[ArsR]}{dt}=k_1[P_{arsR}]-k_{d1}[P_{arsR}][ArsR]\tag{1}
 \end{equation}
-(3)Production of protein smURFP under unbound promoter (r03):
+(3) Production of protein smURFP under unbound promoter (r03):
 \begin{displaymath}
 v=k_2[P_{arsR}]
 \end{displaymath}
-(4)Production of protein smURFP under dCas9*RNAP:sgRNA-bound promoter (r04):
+(4) Production of protein smURFP under dCas9*RNAP:sgRNA-bound promoter (r04):
 \begin{displaymath}
 v=k_{10}[cplx_5]
 \end{displaymath}
-(5)Degration of smURFP protein (r05):
+(5 )Degradation of smURFP protein (r05):
 \begin{displaymath}
 v=-k_{d2}[smURFP]
 \end{displaymath}
-These two come together to form an ODE for the rate of change in smuRFP protein concentration:
+These two come together to form an ODE for changing rate of smuRFP protein concentration:
 \begin{equation}
-\frac{d[smURFP]}{dt}=k_2[P_{arsR}]+k_{10}[cplx_5]-k_{d2}[smuRFP]\tag{2}
+\frac{d[smURFP]}{dt}=k_2[P_{arsR}]+k_{10}[cplx_5]-k_{d2}[smURFP]\tag{2}
 \end{equation}
-(6)Combination of ArsR protein and $P_{arsR}$ promoter(r06):
+(6) Combination of ArsR protein and $P_{arsR}$ promoter (r06):
 \begin{displaymath}
-v=k_3[ArsR][P_arsR]
+v=k_3[ArsR][P_{arsR}]
 \end{displaymath}
-(7)Combination of $As^{3+}$ and ArsR protein bound with $P_{arsR}$ promoter , also dissociation of ArsR protein and $P_{arsR}$ promoter(r07):
+(7) Combination of $As^{3+}$ and ArsR protein bound with $P_{arsR}$ promoter , also dissociation of ArsR protein and $P_{arsR}$ promoter (r07):
 \begin{displaymath}
 v=k_7[As^{3+}][cplx_1]
 \end{displaymath}
-(8)Degration of ArsR protein in the  $ArsR*P_{arsR}$ complex(r08):
+(8) Degradation of ArsR protein in the  ArsR*P\textsubscript{arsR} complex (r08):
 \begin{displaymath}
 v=-k_{d3}[cplx_1]
 \end{displaymath}
-Similarly, these three form the ODE for the rate of change in  $ArsR*P_{arsR}$ concentration.  :
+Similarly, these three form the ODE for the changing rate in ArsR*P\textsubscript{arsR} concentration.  :
 \begin{equation}
 \frac{d[cplx_1]}{dt}=k_3[ArsR][P_{arsR}]-k_7[As^{3+}][[cplx_1]-k_{d3}[cplx_1] \tag{3}
 \end{equation}
-Note that, in this ODE, $k_7$ will be negative. This is because it will be decreasing the concentration of  $ArsR*P_{arsR}$ complex.\\
-(9)Production of dCas9-RNAP fusion protein (r09):
+Note that, in this ODE, $k_7$ will be negative. This is because it will be decreasing the concentration of  ArsR*P\textsubscript{arsR} complex.\\
+(9) Production of dCas9*RNAP fusion protein (r09):
 \begin{displaymath}
 v=k_4[P_{tet}]
 \end{displaymath}
-(10)Degration of dCas9-RNAP fusion protein(r010):
+(10) Degradation of dCas9*RNAP fusion protein (r010):
 \begin{displaymath}
 v=k_{d5}[cplx_3]
 \end{displaymath}
-(11)Combination of dCas9-RNAP fusion protein and it's sgRNA(r011):
+(11) Combination of dCas9*RNAP fusion protein and its sgRNA(r011):
 \begin{displaymath}
 v=k_{8}[cplx_3][sgRNA]
 \end{displaymath}
-These three form the ODE for the rate of change in $dCas9-RNAP$ concentration.
+These three form the ODE for changing rate of dCas9*RNAP concentration.
 \begin{equation}
 \frac{d[cplx_3]}{dt}=k_4[P_{tet}]-k_{8}[cplx_3][sgRNA]-k_{d5}[cplx_3] \tag{4}
 \end{equation}
-Note that, in this ODE, $k_8$ will be negative. This is because it will be decreasing the concentration of  $dCas9-RNAP$ complex.\\
-(12)Production of sgRNA (r012):
+Note that, in this ODE, $k_8$ will be negative. This is because it will be decreasing the concentration of  dCas9*RNAP complex.\\
+(12) Production of sgRNA (r012):
 \begin{displaymath}
 v=k_5[P_{tet}]
 \end{displaymath}
-(13)Degration of sgRNA(r013)
+(13)Degradation of sgRNA (r013)
 \begin{displaymath}
 v=k_{d6}[sgRNA]
 \end{displaymath}
-These two plus r010 come together to form an ODE for the rate of change in sgRNA concentration:
+These two plus r010 come together to form an ODE for changing rate of sgRNA concentration:
 \begin{equation}
 \frac{d[sgRNA]}{dt}=k_5[P_{tet}]-k_{8}[cplx_3][sgRNA]-k_{d6}[sgRNA] \tag{5}
 \end{equation}
 Similarly, in this ODE, $k_8$ will be negative. This is because it will be decreasing the concentration of sgRNA complex.\\
-(14)Combination of $As^{3+}$ and ArsR protein (r014):
+(14) Combination of $As^{3+}$ and ArsR protein (r014):
 \begin{displaymath}
 v=k_{6}[As^{3+}][ArsR]
 \end{displaymath}
-(15)Degration of ArsR protein in the  $As^{3+}*ArsR$ complex(r015):
+(15) Degradation of ArsR protein in the  $As^{3+}*ArsR$ complex(r015):
 \begin{displaymath}
 v=-k_{d6}[As^{3+}*ArsR]
 \end{displaymath}
-These two plus r06 come together to form an ODE for the rate of change in $As^{3+}*ArsR$  concentration and an ODE for the rate of change in $As^{3+}$ concentration:
+These two plus r06 come together to form an ODE for the changing rate of $As^{3+}*ArsR$  concentration and an ODE for the changing rate of $As^{3+}$ concentration:
 \begin{equation}
 \frac{d[cplx_2]}{dt}=k_{6}[As^{3+}][ArsR]+k_7[As^{3+}][cplx_1]-k_{d4}[cplx_2] \tag{6}
 \end{equation}
-Note that, in this ODE, $k_7$ will be positive,different from ODE(3). This is because it will be increasing the concentration of  $As^{3+}*ArsR$ complex.\\
+Note that, in this ODE, $k_7$ will be positive, different from ODE(3). This is because it will be increasing the concentration of  $As^{3+}*ArsR$ complex.\\
 \begin{equation}
 \frac{d[cplx_2]}{dt}=-k_{6}[As^{3+}][ArsR]-k_7[As^{3+}][cplx_1] \tag{7}
 \end{equation}
-(16)Combination of dCas9-RNAP:sgRNA complex and $P_{arsR}$ promoter (r016):
+(16) Combination of dCas9*RNAP:sgRNA complex and $P_{arsR}$ promoter (r016):
 \begin{displaymath}
 v=k_{9}[cplx_4][P_{arsR}]
 \end{displaymath}
-(17)Degration of dCas9-RNAP:sgRNA complex (r017): 
+(17)Degradation of dCas9*RNAP:sgRNA complex (r017): 
 \begin{displaymath}
 v=-k_{d7}[cplx_4]
 \end{displaymath}
@@ -209,8 +198,8 @@ These two plus r010 come together to form an ODE for the rate of change in dCas9
 \begin{equation}
 \frac{d[cplx_4]}{dt}=k_{8}[cplx_3][sgRNA]-k_{9}[cplx_4][P_{arsR}]-k_{d7}[cplx_4]\tag{8}
 \end{equation}
-Note that, in this ODE, $k_8$ will be positive,different from ODE(4). This is because it will be decreasing the concentration of dCas9-RNAP:sgRNA complex.\\
-(18))Degration of dCas9-RNAP:sgRNA complex in $dCas9-RNAP:sgRNA*P_{arsR}$ compex(r018):
+Note that, in this ODE, $k_8$ will be positive, different from ODE(4). This is because it will be decreasing the concentration of dCas9-RNAP:sgRNA complex.\\
+(18)) Degradation of dCas9-RNAP:sgRNA complex in $dCas9-RNAP:sgRNA*P_{arsR}$ compex (r018):
 \begin{displaymath}
 v=-k_{d8}[cplx_5]
 \end{displaymath}
@@ -271,7 +260,7 @@ Altogether, we have 8 ODEs:
 	\caption{\label {tab:test} Parameters}
 	\begin{tabular}{cccccccccccccccccc}
 		\toprule
-		Rate constants & Value& units \\
+		Rate constants & Value& Units & Reference\\
 		\midrule
 		k1 & 1.999e-5 &1/s & Berset et al. \\
 	k2 & 3.312e-6 &1/s & Berset et al.\\
