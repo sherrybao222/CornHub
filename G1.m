@@ -1,4 +1,4 @@
-timespan = [0 24*3600];  %Time span 
+timespan = [0 24*36000];  %Time span 
 init = [0 0 0 0 0 0 0 0 1 1 1 1];  %Initial values of the functions       
 
 %ODE settings
@@ -31,12 +31,12 @@ grid minor;
     P_arsR=f(11);
     As=f(12);
     %parameters
-       k1= 1.999e-5 ;
-		k2 = 3.312e-6;
-		k3 = 3.3e7   ;
-		k4 =1.995e-5 ;
-		k5 = 3.312e-6 ;
-		k6 =1.66e7  ;
+       k1= 1.099e-3 ;
+		k2 = 2.76e-3 ;
+		k3 = 1e4   ;
+		k4 =1.099e-3 ;
+		k5 = 2.76e-3;
+		k6 =1e3 ;
 		k7 =1.26e4;
 		k8=1.6e-2;
 		k9 =1.66e-5;
@@ -50,7 +50,7 @@ grid minor;
         kd7=1e-2;
         kd8=1e-1;
  %ODEs
-dfdt = zeros(10,1);
+    dfdt = zeros(10,1);
     dfdt(1) = k1*P_J23104-kd1*P_arsR*ArsR;
     dfdt(2) = k2*P_arsR+k10*cplx_5-kd2*smURFP;
     dfdt(3) = k3*ArsR*P_arsR-k7*As*cplx_1-kd3*cplx_1;
@@ -61,8 +61,8 @@ dfdt = zeros(10,1);
     dfdt(8) =k9*cplx_4*P_arsR-kd8*cplx_5;
     dfdt(9)=0;
     dfdt(10)=0;
-     dfdt(11)=0;
-     dfdt(12)=-k6*As*ArsR-k7*As*cplx_1;
+    dfdt(11)=0;
+    dfdt(12)=-k6*As*ArsR-k7*As*cplx_1;
   end
   
   

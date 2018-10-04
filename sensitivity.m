@@ -1,10 +1,10 @@
 %parameters
-       k1= 1.999e-5 ;
-		k2 = 3.312e-6;
-		k3 = 3.3e7   ;
-		k4 =1.995e-5 ;
-		k5 = 3.312e-6 ;
-		k6 =1.66e7  ;
+       k1= 1.099e-3 ;
+		k2 = 2.76e-3 ;
+		k3 = 1e4   ;
+		k4 =1.099e-3 ;
+		k5 = 2.76e-3;
+		k6 =1e3 ;
 		k7 =1.26e4;
 		k8=1.6e-2;
 		k9 =1.66e-5;
@@ -19,61 +19,62 @@
         kd8=1e-1;
 
 %set maximun of changements
-change_max=1e-1
+change_max=1e-4;
 %set numbers of changements
-change_num=10
+change_num=5;
 
-
-a=k1;
-b=odefunc(t,f,k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,kd1,kd2,kd3,kd4,kd5,kd6,kd7,kd8)
-for i=1:1:change_max
-    k1=k1+rand()*change_max/change_num;
-    fun_tinf=odefunc(t,f,k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,kd1,kd2,kd3,kd4,kd5,kd6,kd7,kd8);
-    sensi=(fun_tinf-b)/(k1-a);
-
-    a=k1;
+syms t P_J23104 P_arsR ArsR cplx_2 cplx_5 cplx_4 smURFP As cplx_1 cplx_3 sgRNA P_tet
+a=k2;
+b=draw(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,kd1,kd2,kd3,kd4,kd5,kd6,kd7,kd8);
+S=[];
+A=[];
+for i=1:1:change_num
+   
+    %k1=k1+rand()*change_max/change_num;
+    k2=k2+rand()*change_max/change_num;
+    %k3=k3+rand()*change_max/change_num;
+    %k4=k4+rand()*change_max/change_num;
+    %k5=k5+rand()*change_max/change_num;
+    
+    fun_tinf=draw(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,kd1,kd2,kd3,kd4,kd5,kd6,kd7,kd8);
+    sensi=(fun_tinf-b)/(k2-a);
+    a=k2;
+    %a=k4;
     b=fun_tinf;
+    A=[A a];
+    S=[S sensi];   
 end
-
-function fun_inf = odefunc(t,f,k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,kd1,kd2,kd3,kd4,kd5,kd6,kd7,kd8)    
-    timespan = [0 24*3600];  %Time span 
+plot(A,S)
+function fun_inf = draw(k1,k2,k3,k4,k5,k6,k7,k8,k9,k10,kd1,kd2,kd3,kd4,kd5,kd6,kd7,kd8)    
+    timespan = [0 24*36000];  %Time span 
     init = [0 0 0 0 0 0 0 0 1 1 1 1];  %Initial values of the functions       
 
     %ODE settings
     odesettings = odeset('AbsTol', 1e-12, 'RelTol', 1e-6);
 
-
-     %Functions
-    ArsR = f(1);
-   smURFP = f(2);
-    cplx_1= f(3);
-    cplx_3 = f(4);
-      sgRNA = f(5);
-   cplx_2 = f(6);
-    cplx_4= f(7);
-    cplx_5 = f(8);
-    P_J23104=f(9);
-    P_tet=f(10);
-    P_arsR=f(11);
-    As=f(12);
-    %parameters
 %ODEs
-   odefunc=@(t,f)[k1*P_J23104-kd1*P_arsR*ArsR;
-     k2*P_arsR+k10*cplx_5-kd2*smURFP;
-    k3*ArsR*P_arsR-k7*As*cplx_1-kd3*cplx_1;
-  k4*P_tet-k8*cplx_3*sgRNA-kd5*cplx_3;
-    k5*P_tet-k8*cplx_3*sgRNA-kd6*sgRNA;
-   k6*As*ArsR+k7*As*cplx_1-kd4*cplx_2;
-     k8*cplx_3*sgRNA-k9*cplx_4*P_arsR-kd7*cplx_4;
-    k9*cplx_4*P_arsR-kd8*cplx_5;
+%@(t,P_J23104,P_arsR,ArsR,cplx_2,cplx_5,cplx_4,smURFP,As,cplx_1,cplx_3,sgRNA,P_tet)
+   odefunc=@(t,f)[k1*f(9)-kd1*f(11)*f(1);
+     k2*f(11)+k10*f(8)-kd2*f(2);
+    k3*f(1)*f(11)-k7*f(12)*f(3)-kd3*f(3);
+  k4*f(10)-k8*f(4)*f(5)-kd5*f(4);
+    k5*f(10)-k8*f(4)*f(5)-kd6*f(5);
+   k6*f(12)*f(1)+k7*f(12)*f(3)-kd4*f(6);
+     k8*f(4)*f(5)-k9*f(7)*f(11)-kd7*f(7);
+    k9*f(7)*f(11)-kd8*f(8);
     0;
     0;
     0;
-   -k6*As*ArsR-k7*As*cplx_1];
+   -k6*f(12)*f(1)-k7*f(12)*f(3)];
+   
     %simulating the ODE
-    [t,f] = ode15s(@odefunc, timespan, init, odesettings);  
-    fun_inf=f(k1,1)
-    plot(t,f(:,1));hold on;
+    [t,f] = ode15s(odefunc, timespan, init, odesettings);  
+
+    %set output concentration NO
+   NO=2;    
+     fun_inf=f(end,NO);
+     
+%    plot(t,f(:,NO));hold on;
   end
   
 
