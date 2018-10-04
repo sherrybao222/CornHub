@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.3)  11 JUL 2018 16:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.3)  11 JUL 2018 16:18
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**Zheng.tex
-(./Zheng.tex
+**Minghui.tex
+(./Minghui.tex
 LaTeX2e <2017-04-15>
 Babel <3.10> and hyphenation patterns for 84 language(s) loaded.
 (/usr/local/texlive/2017/texmf-dist/tex/latex/base/article.cls
@@ -951,8 +951,8 @@ File: english.lbx 2016/12/05 v3.7 biblatex localization (PK/JW/AB)
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... none found.
 
-(./Zheng.aux)
-\openout1 = `Zheng.aux'.
+(./Minghui.aux)
+\openout1 = `Minghui.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 52.
 LaTeX Font Info:    ... okay on input line 52.
@@ -975,8 +975,7 @@ File: ot1iwona.fd 2008/07/22 v0.995 font definition file for OT1/iwona (MW)
 )
 \AtBeginShipoutBox=\box34
 Package hyperref Info: Link coloring OFF on input line 52.
-
-(/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
+ (/usr/local/texlive/2017/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 
 (/usr/local/texlive/2017/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
@@ -988,9 +987,9 @@ LaTeX Info: Redefining \ref on input line 52.
 LaTeX Info: Redefining \pageref on input line 52.
 LaTeX Info: Redefining \nameref on input line 52.
 
-(./Zheng.out) (./Zheng.out)
+(./Minghui.out) (./Minghui.out)
 \@outlinefile=\write5
-\openout5 = `Zheng.out'.
+\openout5 = `Minghui.out'.
 
 
 (/usr/local/texlive/2017/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -1040,12 +1039,12 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Input encoding 'utf8' specified.
 Package biblatex Info: Data encoding 'utf8' specified.
 (biblatex)             No need to reencode data.
-\openout4 = `Zheng-blx.bib'.
+\openout4 = `Minghui-blx.bib'.
 
 Package biblatex Info: Trying to load bibliographic data...
-Package biblatex Info: ... file 'Zheng.bbl' found.
+Package biblatex Info: ... file 'Minghui.bbl' found.
 
-(./Zheng.bbl)
+(./Minghui.bbl)
 Package biblatex Info: Reference section=0 on input line 52.
 Package biblatex Info: Reference segment=0 on input line 52.
 LaTeX Font Info:    Try loading font information for U+msa on input line 54.
@@ -1053,7 +1052,6 @@ LaTeX Font Info:    Try loading font information for U+msa on input line 54.
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 54.
-
 (/usr/local/texlive/2017/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
@@ -1069,28 +1067,28 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 66.
 {/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map}]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 66.
 
-(./Zheng.aux)
+(./Minghui.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 66.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 66.
-Package rerunfilecheck Info: File `Zheng.out' has not changed.
+Package rerunfilecheck Info: File `Minghui.out' has not changed.
 (rerunfilecheck)             Checksum: F1DA894432E37993287035581E7A121B;47.
-Package logreq Info: Writing requests to 'Zheng.run.xml'.
-\openout1 = `Zheng.run.xml'.
+Package logreq Info: Writing requests to 'Minghui.run.xml'.
+\openout1 = `Minghui.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 66.
  ) 
 Here is how much of TeX's memory you used:
  16404 strings out of 492995
- 263284 string characters out of 6132705
- 557705 words of memory out of 5000000
+ 263320 string characters out of 6132705
+ 557706 words of memory out of 5000000
  19747 multiletter control sequences out of 15000+600000
  26168 words of font info for 46 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,6n,40p,931b,698s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 42i,6n,40p,933b,698s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc}</usr/
 local/texlive/2017/texmf-dist/fonts/type1/nowacki/iwona/iwonab.pfb></usr/local/
 texlive/2017/texmf-dist/fonts/type1/nowacki/iwona/iwonar.pfb>
-Output written on Zheng.pdf (1 page, 46598 bytes).
+Output written on Minghui.pdf (1 page, 46458 bytes).
 PDF statistics:
  26 PDF objects out of 1000 (max. 8388607)
  20 compressed objects within 1 object stream
