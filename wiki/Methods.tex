@@ -30,21 +30,20 @@ Figure \ref{fig:2} shows that the whole binding-cleavage process begins with the
 \label{fig:5}
 \end{figure}
 	
-The boundary probability $P_{clv;N}$ , representing the probability of cleavage starting with a full correct match and without reducing the array’s length, is given by a simple splitting probability (based on the conditional probability formula):
+The boundary probability $P_{clv;N}$ , representing the probability of matching at the Nth position (the last position of sgRNA) of nucleotide base, is given by:
 \begin{equation}
-P_{clv,N}=\frac{k_f(N)}{k_f(N)+k_b(N)}=\frac{1}{1+\gamma_N} \quad
+P_{m,N}=\frac{k_f(N)}{k_f(N)+k_b(N)}=\frac{1}{1+\gamma_N} \quad
 \end{equation}
-where
+where $k$ is the reaction rate constant; $f$ represents the forward reaction; $b$ represents the backward reaction. And 
 \begin{equation}
  \gamma_N=\frac{k_b(N)}{k_f(N)}
 \end{equation}
-	
+So for a complete match: 
 \begin{equation}
-P_{clv} \equiv P_{clv,0} = \frac{1}{1+\sum_{k=1}^N\coprod_{i=1}^n \gamma_i}
+P_{m} \equiv P_{m,0} = \frac{1}{1+\sum_{k=1}^N\coprod_{i=1}^n \gamma_i}
 \end{equation}
-where $F_i$ is the free energy and $T_i$ is the transition state energy. 
 
-From $i$ to $i+1$, we can get the relationship between reaction constant and free energy:
+$F_i$ is the free energy and $T_i$ is the transition state energy. From position $i-1$ to $i$, we can get the relationship between reaction rate constant and free energy:
 \begin{equation}
 k_f(i)=k_0exp(-(T_i-F_i)),k_b(i)=k_0exp(-(-T_{i-1}-F_i))
 \end{equation}
