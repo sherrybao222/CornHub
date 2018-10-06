@@ -43,10 +43,11 @@ So for a complete match:
 P_{m} \equiv P_{m,0} = \frac{1}{1+\sum_{k=1}^N\coprod_{i=1}^n \gamma_i}
 \end{equation}
 
-$F_i$ is the free energy and $T_i$ is the transition state energy. From position $i-1$ to $i$, we can get the relationship between reaction rate constant and free energy:
+consider the rate constant $k_f(i)$ and $k_b(i)$:
 \begin{equation}
 k_f(i)=k_0exp(-(T_i-F_i)),k_b(i)=k_0exp(-(-T_{i-1}-F_i))
 \end{equation}
+which $F_i$means free energy of each metastable state,$T_i$ means highest free energy point on the reaction path from i to i + 1. Therefore, $T_i-F_i$is the activative energy of forward reaction and $T_{i-1}-F_i$is activative energy of the backward reaction.
 \begin{equation}
 \Rightarrow \gamma_i=exp(-\Delta_i),\Delta_i=T_i-T_{i-1}
 \end{equation}
@@ -58,7 +59,7 @@ k_f(i)=k_0exp(-(T_i-F_i)),k_b(i)=k_0exp(-(-T_{i-1}-F_i))
 We define $$\Delta T_n=\sum_{k=1}^n\Delta_i$$
 so
 \begin{equation} 
-P_{clv} =\frac{1}{1+\sum_{k=1}^N exp(-\Delta T_n)}
+P_{clv} =\frac{1}{1+\sum_{n=1}^N exp(-\Delta T_n)}
 \end{equation}
 	
 From the above, it is clear that the cleavage probability depends only on the transition state energies, while not on the free energies of the metastable states. If we assume there is one dominant minimal bias, say for $n = n^*$, then this can be approximated as:
