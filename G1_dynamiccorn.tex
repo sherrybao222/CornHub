@@ -1,8 +1,7 @@
 \section{Introduction}
 Modeling is a powerful tool in synthetic biology. It can provide us with an important engineering approach to characterize our pathways quantitatively and predict their performance, thus help us test and modify our design.
 
-Through the dynamic model, we hope to gain insights of the characteristics of our whole circuit's dynamics. Several tools including ordinary differential equations(ODE) and interpolation are employed.
-
+Through the dynamic model, we hope to gain insights of the characteristics of our whole circuit's dynamics.
 
 \section{Method}
 
@@ -95,102 +94,102 @@ We then take degradation into account:\\
 \\
 
 We can now write each reaction into ODEs (not following the order above). We will use $v$ as an arbitrary variable, simply there to denote a rate of reaction. The "r0x" notation will be used later in the programming to remove clutter from the code. The several complexes involved:ArsR*P\textsubscript{arsR} , As\textsuperscript{3+}*ArsR, dCas9*RNAP, dCas9*RNAP:sgRNA, dCas9*RNAP:sgRNA*P\textsubscript{arsR}, are respectively abbreviated as $cplx_1$, $cplx_2$, $cplx_3$, $cplx_4$, $cplx_5$.\\
-(1) Production of protein ArsR (r01):
+(1)Production of protein ArsR (r01):
 \begin{displaymath}
 v=k_1[P_{J23104}]
 \end{displaymath}
-(2) Degradation of ArsR protein (r02):
+(2)Degration of ArsR protein (r02):
 \begin{displaymath}
 v=-k_{d1}[ArsR]
 \end{displaymath}
-Note that this rate will be negative. This is because the concentration of ArsR protein will decrease for degradation . We can now put them together, forming an ODE for changing rate of ArsR protein concentration.
+Note thatthere should be a minus sign. This is because it will be decreasing the concentration of the ArsR protein . We can now put them together, to form an ordinary differential equation (ODE) for the rate of change in ArsR protein concentration.
 \begin{equation}
 \frac{d[ArsR]}{dt}=k_1[P_{arsR}]-k_{d1}[P_{arsR}][ArsR]\tag{1}
 \end{equation}
-(3) Production of protein smURFP under unbound promoter (r03):
+(3)Production of protein smURFP under unbound promoter (r03):
 \begin{displaymath}
 v=k_2[P_{arsR}]
 \end{displaymath}
-(4) Production of protein smURFP under dCas9*RNAP:sgRNA-bound promoter (r04):
+(4)Production of protein smURFP under dCas9*RNAP:sgRNA-bound promoter (r04):
 \begin{displaymath}
 v=k_{10}[cplx_5]
 \end{displaymath}
-(5 )Degradation of smURFP protein (r05):
+(5)Degration of smURFP protein (r05):
 \begin{displaymath}
 v=-k_{d2}[smURFP]
 \end{displaymath}
-These two come together to form an ODE for changing rate of smuRFP protein concentration:
+These two come together to form an ODE for the rate of change in smuRFP protein concentration:
 \begin{equation}
-\frac{d[smURFP]}{dt}=k_2[P_{arsR}]+k_{10}[cplx_5]-k_{d2}[smURFP]\tag{2}
+\frac{d[smURFP]}{dt}=k_2[P_{arsR}]+k_{10}[cplx_5]-k_{d2}[smuRFP]\tag{2}
 \end{equation}
-(6) Combination of ArsR protein and $P_{arsR}$ promoter (r06):
+(6)Combination of ArsR protein and $P_{arsR}$ promoter(r06):
 \begin{displaymath}
-v=k_3[ArsR][P_{arsR}]
+v=k_3[ArsR][P_arsR]
 \end{displaymath}
-(7) Combination of $As^{3+}$ and ArsR protein bound with $P_{arsR}$ promoter , also dissociation of ArsR protein and $P_{arsR}$ promoter (r07):
+(7)Combination of $As^{3+}$ and ArsR protein bound with $P_{arsR}$ promoter , also dissociation of ArsR protein and $P_{arsR}$ promoter(r07):
 \begin{displaymath}
 v=k_7[As^{3+}][cplx_1]
 \end{displaymath}
-(8) Degradation of ArsR protein in the  ArsR*P\textsubscript{arsR} complex (r08):
+(8)Degration of ArsR protein in the  $ArsR*P_{arsR}$ complex(r08):
 \begin{displaymath}
 v=-k_{d3}[cplx_1]
 \end{displaymath}
-Similarly, these three form the ODE for the changing rate in ArsR*P\textsubscript{arsR} concentration.  :
+Similarly, these three form the ODE for the rate of change in  $ArsR*P_{arsR}$ concentration.  :
 \begin{equation}
 \frac{d[cplx_1]}{dt}=k_3[ArsR][P_{arsR}]-k_7[As^{3+}][[cplx_1]-k_{d3}[cplx_1] \tag{3}
 \end{equation}
-Note that, in this ODE, $k_7$ will be negative. This is because it will be decreasing the concentration of  ArsR*P\textsubscript{arsR} complex.\\
-(9) Production of dCas9*RNAP fusion protein (r09):
+Note that, in this ODE, there should be a minus sign in front of $k_7$. This is because it will be decreasing the concentration of  $ArsR*P_{arsR}$ complex.\\
+(9)Production of dCas9-RNAP fusion protein (r09):
 \begin{displaymath}
 v=k_4[P_{tet}]
 \end{displaymath}
-(10) Degradation of dCas9*RNAP fusion protein (r010):
+(10)Degration of dCas9-RNAP fusion protein(r010):
 \begin{displaymath}
 v=k_{d5}[cplx_3]
 \end{displaymath}
-(11) Combination of dCas9*RNAP fusion protein and its sgRNA(r011):
+(11)Combination of dCas9-RNAP fusion protein and it's sgRNA(r011):
 \begin{displaymath}
 v=k_{8}[cplx_3][sgRNA]
 \end{displaymath}
-These three form the ODE for changing rate of dCas9*RNAP concentration.
+These three form the ODE for the rate of change in $dCas9-RNAP$ concentration.
 \begin{equation}
 \frac{d[cplx_3]}{dt}=k_4[P_{tet}]-k_{8}[cplx_3][sgRNA]-k_{d5}[cplx_3] \tag{4}
 \end{equation}
-Note that, in this ODE, $k_8$ will be negative. This is because it will be decreasing the concentration of  dCas9*RNAP complex.\\
-(12) Production of sgRNA (r012):
+Note that, in this ODE, there should be a minus sign in front of $k_8$. This is because it will be decreasing the concentration of  $dCas9-RNAP$ complex.\\
+(12)Production of sgRNA (r012):
 \begin{displaymath}
 v=k_5[P_{tet}]
 \end{displaymath}
-(13)Degradation of sgRNA (r013)
+(13)Degration of sgRNA(r013)
 \begin{displaymath}
 v=k_{d6}[sgRNA]
 \end{displaymath}
-These two plus r010 come together to form an ODE for changing rate of sgRNA concentration:
+These two plus r010 come together to form an ODE for the rate of change in sgRNA concentration:
 \begin{equation}
 \frac{d[sgRNA]}{dt}=k_5[P_{tet}]-k_{8}[cplx_3][sgRNA]-k_{d6}[sgRNA] \tag{5}
 \end{equation}
-Similarly, in this ODE, $k_8$ will be negative. This is because it will be decreasing the concentration of sgRNA complex.\\
-(14) Combination of $As^{3+}$ and ArsR protein (r014):
+Similarly, in this ODE,there should be a minus sign in front of $k_8$ . This is because it will be decreasing the concentration of sgRNA complex.\\
+(14)Combination of $As^{3+}$ and ArsR protein (r014):
 \begin{displaymath}
 v=k_{6}[As^{3+}][ArsR]
 \end{displaymath}
-(15) Degradation of ArsR protein in the  $As^{3+}*ArsR$ complex(r015):
+(15)Degration of ArsR protein in the  $As^{3+}*ArsR$ complex(r015):
 \begin{displaymath}
 v=-k_{d6}[As^{3+}*ArsR]
 \end{displaymath}
-These two plus r06 come together to form an ODE for the changing rate of $As^{3+}*ArsR$  concentration and an ODE for the changing rate of $As^{3+}$ concentration:
+These two plus r06 come together to form an ODE for the rate of change in $As^{3+}*ArsR$  concentration and an ODE for the rate of change in $As^{3+}$ concentration:
 \begin{equation}
 \frac{d[cplx_2]}{dt}=k_{6}[As^{3+}][ArsR]+k_7[As^{3+}][cplx_1]-k_{d4}[cplx_2] \tag{6}
 \end{equation}
-Note that, in this ODE, $k_7$ will be positive, different from ODE(3). This is because it will be increasing the concentration of  $As^{3+}*ArsR$ complex.\\
+Note that, in this ODE, there should be no minus sign in front of$k_7$ ,which is different from ODE(3). This is because it will be increasing the concentration of  $As^{3+}*ArsR$ complex.\\
 \begin{equation}
-\frac{d[cplx_2]}{dt}=-k_{6}[As^{3+}][ArsR]-k_7[As^{3+}][cplx_1] \tag{7}
+\frac{d[As^{3+}]}{dt}=-k_{6}[As^{3+}][ArsR]-k_7[As^{3+}][cplx_1] \tag{7}
 \end{equation}
-(16) Combination of dCas9*RNAP:sgRNA complex and $P_{arsR}$ promoter (r016):
+(16)Combination of dCas9-RNAP:sgRNA complex and $P_{arsR}$ promoter (r016):
 \begin{displaymath}
 v=k_{9}[cplx_4][P_{arsR}]
 \end{displaymath}
-(17)Degradation of dCas9*RNAP:sgRNA complex (r017): 
+(17)Degration of dCas9-RNAP:sgRNA complex (r017): 
 \begin{displaymath}
 v=-k_{d7}[cplx_4]
 \end{displaymath}
@@ -198,8 +197,8 @@ These two plus r010 come together to form an ODE for the rate of change in dCas9
 \begin{equation}
 \frac{d[cplx_4]}{dt}=k_{8}[cplx_3][sgRNA]-k_{9}[cplx_4][P_{arsR}]-k_{d7}[cplx_4]\tag{8}
 \end{equation}
-Note that, in this ODE, $k_8$ will be positive, different from ODE(4). This is because it will be decreasing the concentration of dCas9-RNAP:sgRNA complex.\\
-(18)) Degradation of dCas9-RNAP:sgRNA complex in $dCas9-RNAP:sgRNA*P_{arsR}$ compex (r018):
+Similarly, in this ODE, there should be no minus sign in front of$k_8$ , which is different from ODE(4). This is because it will be decreasing the concentration of dCas9-RNAP:sgRNA complex.\\
+(18))Degration of dCas9-RNAP:sgRNA complex in $dCas9-RNAP:sgRNA*P_{arsR}$ compex(r018):
 \begin{displaymath}
 v=-k_{d8}[cplx_5]
 \end{displaymath}
@@ -237,7 +236,7 @@ Altogether, we have 8 ODEs:
 \frac{d[cplx_2]}{dt}=k_{6}[As^{3+}][ArsR]+k_7[As^{3+}][cplx_1]-k_{d4}[cplx_2] \tag{6}
 \end{equation}
 \begin{equation}
-\frac{d[cplx_2]}{dt}=-k_{6}[As^{3+}][ArsR]-k_7[As^{3+}][cplx_1] \tag{7}
+\frac{d[As^{3+}]}{dt}=-k_{6}[As^{3+}][ArsR]-k_7[As^{3+}][cplx_1] \tag{7}
 \end{equation}
 \begin{equation}
 \frac{d[cplx_4]}{dt}=k_{8}[cplx_3][sgRNA]-k_{9}[cplx_4][P_{arsR}]-k_{d7}[cplx_4]\tag{8}
@@ -307,7 +306,106 @@ almost the same functions as SimBiology, though not quite powerful. But compared
 
 Through the figure, we can see that the smURFP fluorescence gradually increased and then reached a steady state after a period of time  in the presence of arsenic ions.
 
-
+\subsection{sensitivity }
+Parameter sensitivity analysis is used to identify which parameters are more critical in effecting the output of the pathway, and help to gain a deeper insight of the structure and the function of the system. The sensitivity is calculated in this way:
+\begin{equation}
+sensitivity\frac{\Delta output}{\Delta parameter} 
+\end{equation}
+The Matlab scripts used for sensitivity analysis see attached.
+\begin{figure}
+	\centering
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s1.jpg}
+	\end{varwidth}%
+	\caption{sensitivity of k1}
+	%\qquad 
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s2.jpg}
+	\end{varwidth}
+	\caption{sensitivity of k2}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s3.jpg}
+	\end{varwidth}
+	\caption{sensitivity of k3}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s4.jpg}
+	\end{varwidth}
+	\caption{sensitivity of k4}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s5.jpg}
+	\end{varwidth}
+	\caption{sensitivity of k5}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s6.jpg}
+	\end{varwidth}
+	\caption{sensitivity of k6}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s7.jpg}
+	\end{varwidth}
+	\caption{sensitivity of k7}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s8.jpg}
+	\end{varwidth}
+	\caption{sensitivity of k8}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s9.jpg}
+	\end{varwidth}
+	\caption{sensitivity of k9}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{s10.jpg}
+	\end{varwidth}
+	\caption{sensitivity of k10}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{sd1.jpg}
+	\end{varwidth}
+	\caption{sensitivity of kd1}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{sd2.jpg}
+	\end{varwidth}
+	\caption{sensitivity of kd2}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{sd3.jpg}
+	\end{varwidth}
+	\caption{sensitivity of kd3}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{sd4.jpg}
+	\end{varwidth}
+	\caption{sensitivity of kd4}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{sd5.jpg}
+	\end{varwidth}
+	\caption{sensitivity of kd5}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{sd6.jpg}
+	\end{varwidth}
+	\caption{sensitivity of kd6}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{sd7.jpg}
+	\end{varwidth}
+	\caption{sensitivity of kd7}
+	\begin{varwidth}[t]{\textwidth}
+		\vspace{0pt}
+		\includegraphics[height=4cm]{sd8.jpg}
+	\end{varwidth}
+	\caption{sensitivity of kd8}
+\end{figure}
 
 
 
