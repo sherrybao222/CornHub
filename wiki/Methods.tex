@@ -40,46 +40,44 @@ where $k$ is the reaction rate constant; $f$ represents the forward reaction; $b
 \end{equation}
 So for a complete match: 
 \begin{equation}
-P_{m} \equiv P_{m,0} = \frac{1}{1+\sum_{k=1}^N\coprod_{i=1}^n \gamma_i}
+P_{m} \equiv P_{m,0} = \frac{1}{1+\sum_{n=1}^N\coprod_{i=1}^n \gamma_i}
 \end{equation}
-
-consider the rate constant $k_f(i)$ and $k_b(i)$:
+Consider the rate constant $k_f(i)$ and $k_b(i)$:
 \begin{equation}
-k_f(i)=k_0exp(-(T_i-F_i)),k_b(i)=k_0exp(-(-T_{i-1}-F_i))
+k_f(i)=k_0exp(-(T_{i,i+1}-F_i)),k_b(i)=k_0exp(-(T_{i,i-1}-F_i))
 \end{equation}
-which $F_i$means free energy of each metastable state,$T_i$ means highest free energy point on the reaction path from i to i + 1. Therefore, $T_i-F_i$is the activative energy of forward reaction and $T_{i-1}-F_i$is activative energy of the backward reaction.
+where $F_i$ means free energy of each metastable state, $T_{i,i+1}$ means the highest free energy point on the reaction path from position i to position i + 1. Therefore, $T_{i,i+1}-F_i$ is the activation energy of forward reaction and $T_{i,i-1}-F_i$ is activation energy of the backward reaction.
 \begin{equation}
-\Rightarrow \gamma_i=exp(-\Delta_i),\Delta_i=T_i-T_{i-1}
+\Rightarrow \gamma_i=exp(-\Delta_i), \Delta_i=T_{i,i+1}-T_{i,i-1}
 \end{equation}
 \begin{equation}
 \begin{aligned}
-\Rightarrow P_{clv} = \frac{1}{1+\sum_{k=1}^N\coprod_{i=1}^n \gamma_i}=\frac{1}{1+\sum_{k=1}^N\coprod_{i=1}^n exp(-\Delta_i)}\\=\frac{1}{1+\sum_{k=1}^N exp(-\sum_{k=1}^n\Delta_i)}
+\Rightarrow P_{m} = \frac{1}{1+\sum_{n=1}^N\coprod_{i=1}^n \gamma_i}=\frac{1}{1+\sum_{n=1}^N\coprod_{i=1}^n exp(-\Delta_i)}\\=\frac{1}{1+\sum_{n=1}^N exp(-\sum_{i=1}^n\Delta_i)}
 \end{aligned}
 \end{equation}
-We define $$\Delta T_n=\sum_{k=1}^n\Delta_i$$
+We define $$\Delta T_n=\sum_{i=1}^n\Delta_i$$
 so
 \begin{equation} 
-P_{clv} =\frac{1}{1+\sum_{n=1}^N exp(-\Delta T_n)}
+P_{m} =\frac{1}{1+\sum_{n=1}^N exp(-\Delta T_n)}
 \end{equation}
 	
-From the above, it is clear that the cleavage probability depends only on the transition state energies, while not on the free energies of the metastable states. If we assume there is one dominant minimal bias, say for $n = n^*$, then this can be approximated as:
+From the above, it is clear that the matching probability depends only on the state transition energy, not on the free energy of the metastable states. If we assume there is one dominant minimal bias, say for $n = n^*$, then this equation can be approximated as:
 \begin{equation}
- P_{clv} \approx \frac{1}{1+exp(-\Delta T_{n^*})}
+ P_{m} \approx \frac{1}{1+exp(-\Delta T_{n^*})}
 \end{equation}
-As figure shows, we analyse each process energy change:\newline
-$$
+
+As figure shows, we analyze each process energy change:\newline
 $\left\{
 \begin{tabular}{l}
-for the PAM state (i = 0) we have 
-$\Delta_0=∆PAM$\\
-for a partial R-loop we have $\Delta_i = \Delta_C$ and $\Delta_i = −\Delta_I$ if mismatched\\
+for the PAM state (i = 0) we have $\Delta_0=\Delta PAM$\\
+for a partial R-loop we have $\Delta_i = \Delta_C$ and $\Delta_i = -\Delta_I$ if mismatched\\
 \end{tabular}
-\right.
-$$\par	
+\right.$
+
 \begin{equation}
 \Delta {T_n} = {\Delta _{PAM}} + {n_C}(n){\Delta _C} - (n - {n_C}){\Delta _I} - {\delta _{n,N}}{\Delta _{clv}};\:n = 0...N
 \end{equation}
-where $\delta_{n,N}$ represents the $Kronecker$ delta:
+where $\delta_{n,N}$ represents the Kronecker delta:
 $\delta_{n,N}$=$\left\{\begin{array}{l}1, n=N;\\
 0, n\neq N.
 \end{array}
@@ -102,6 +100,7 @@ To sum up, the cleavage possibility mainly relies on the free energy change, and
 	\caption{CG}
 	\label{fig:7}
 \end{figure}
+
 So the kinetic module set up a form to regress the relationship between cleavage and the numbers of nucleotide matches and mismatches.
 In consideration of this problem more carefully, the cleavage possibility becomes equal to analysis energy change, and we know the binding energy of A/T and C/G is different due to the different hydrogen bond between them. However, in appearing kinetic model, research tend to describe them in a rough definition as “matched base pairs”, and the energy incline in C/G is approximately 1.5 folds as A/T. Similarly, the mismatch has more difference because the size of nucleotides is various. Hence, the combination of the mismatched base pair was classified by group volume, i.e. two pyrimidines (such as C/T, “L”), pyrimidine and purine (such as C/A, “M”), two purine (such as G/T, “S”). Hence, our possibility can be calculated using the following formation.
 \begin{equation}
