@@ -1,8 +1,9 @@
-\section{Introduction}
-Nowadays, the analysis of cleavage possibility can be devided into to type, i.e. meta-empirical and empirical. For the first one, many people develop the various score function based on experiment data to evaluate if a sgDNA is good or bad. Correspondingly, the other group chooce set up a theoretical model based on kinetic theory. But because using many approximations, it has drawbacks inevitably. 
+\section{Background}
+The current models of the off-target problem in the CRISPR-Cas system can be divided into three types. Firstly, it can be modeled as purely "sequence alignment problem" similar to BLAST, which doesn't consider either the energy change or the experiment data; Secondly, it can be modeled with the help of experiment data; Thirdly, in a kinetic model, the energy change will be considered. 
 
-Our model aims to investigate the off-target problem in gene editing by the CRISPR-Cas system, therefore finding efficient ways to enhance the reliability of gene editing. The foundations of this model are mostly simple probability theory and dynamic deduction, which make our model both convincing and pellucid.
-	
+Our model aims to investigate the off-target problem in the CRISPR-Cas system in an innovative kinetic model, therefore finding efficient ways to enhance the reliability of gene editing. Our motivation is based on our project Cell-free cancer detection. Firstly, there are no existing tools for evaluating sgRNA candidates' off-target probability with Cas13a, and the current tool for Cas12a is BLAST-based, which means that it is a rough model and can hardly take the case of single nucleotide mutation of cancer into account. The foundations of our model are mostly simple probability theory and energy theory, which make our model both convincing and pellucid.
+
+\section{Introduction}
 Currently, people have constructed a similar model as illustrated in the following figure \ref{fig:1}. There are four common rules when Cas nuclease cleaves the DNA\cite{klein2018hybridization}.
 	.
 \begin{figure}[tbph]
@@ -12,10 +13,10 @@ Currently, people have constructed a similar model as illustrated in the followi
 \label{fig:1}
 \end{figure}
 	
-(1) Seed region: single mismatch(es) within a PAM proximal seed region can completely disrupt interference\par
-(2) Mismatch spread: when mismatches are outside the seed region, off-targets with spread out mismatches are targeted most strongly\par
-(3) Differential binding versus differential cleavage: binding is more tolerant of mismatches than cleavage\par 
-(4) Specificity-efficiency decoupling: weakened protein-DNA interactions can improve target selectivity while still maintaining efficiency\par
+(1) Seed region: single mismatch(es) within a PAM proximal seed region can completely disrupt interference;\par
+(2) Mismatch spread: when mismatches are outside the seed region, off-targets with spread out mismatches are targeted most strongly;\par
+(3) Differential binding versus differential cleavage: binding is more tolerant of mismatches than cleavage;\par 
+(4) Specificity-efficiency decoupling: weakened protein-DNA interactions can improve target selectivity while still maintaining efficiency;\par
 
 Based on these four rules, probability theory is applied in to explain it. As we know, there are always only two results in an experiment, which are successful cleavage and unsuccessful cleavage. In math view, it can be one-hot encoded, and they are corresponding to 1 and 0. 
 

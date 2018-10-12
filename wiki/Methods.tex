@@ -1,36 +1,38 @@
 \section{Methods}
 %	\includegraphics[width=5in]{1.png}
 \subsection{Kinetic module}
-Figure \ref{fig:2} shows that the whole binding-cleavage process begins with the binding between PAM and protein. Therefore, it corresponds to rule 1 mentioned before. And as the reaction proceeds, every step of it is reversible, and its irreversibility mainly depends on the binding energy of two DNA bases.
-\begin{figure}
+Figure \ref{fig:2} shows that the whole binding-cleavage process begins with the binding between PAM and protein. It corresponds to rule 1 mentioned before. And as the reaction proceeds, every step of it is reversible, and its irreversibility mainly depends on the binding energy of two DNA bases.
+\begin{figure}[h]
 \centering
 \includegraphics[width=0.7\linewidth]{2}
 \caption{}
 \label{fig:2}
 \end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{3}
-\caption{}
-\label{fig:3}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{4}
-\caption{}
-\label{fig:4}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=0.7\linewidth]{5}
-\caption{}
-\label{fig:5}
-\end{figure}
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.7\linewidth]{3}
+%\caption{}
+%\label{fig:3}
+%\end{figure}
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.7\linewidth]{4}
+%\caption{}
+%\label{fig:4}
+%\end{figure}
+%
+%\begin{figure}
+%\centering
+%\includegraphics[width=0.7\linewidth]{5}
+%\caption{}
+%\label{fig:5}
+%\end{figure}
 	
-The boundary probability $P_{clv;N}$ , representing the probability of matching at the Nth position (the last position of sgRNA) of nucleotide base, is given by:
+Here we use the term matching probability $P_{m}$ represent the probability of the off-target, with a rough assumption that the probability of cleavage is the same for every type of matching. In total, the probability of off-target is positively correlated with the matching probability. 
+
+The probability $P_{m,N}$ , representing the probability of matching at the Nth position (the last position of sgRNA) of nucleotide base, is given by:
 \begin{equation}
 P_{m,N}=\frac{k_f(N)}{k_f(N)+k_b(N)}=\frac{1}{1+\gamma_N} \quad
 \end{equation}
@@ -38,9 +40,9 @@ where $k$ is the reaction rate constant; $f$ represents the forward reaction; $b
 \begin{equation}
  \gamma_N=\frac{k_b(N)}{k_f(N)}
 \end{equation}
-So for a complete match: 
+So for a the whole sgRNA sequence: 
 \begin{equation}
-P_{m} \equiv P_{m,0} = \frac{1}{1+\sum_{n=1}^N\coprod_{i=1}^n \gamma_i}
+P_{m} = \frac{1}{1+\sum_{n=1}^N\coprod_{i=1}^n \gamma_i}
 \end{equation}
 Consider the rate constant $k_f(i)$ and $k_b(i)$:
 \begin{equation}
@@ -61,7 +63,7 @@ so
 P_{m} =\frac{1}{1+\sum_{n=1}^N exp(-\Delta T_n)}
 \end{equation}
 	
-From the above, it is clear that the matching probability depends only on the state transition energy, not on the free energy of the metastable states. If we assume there is one dominant state, say for $n = n^*$, then this equation can be approximated as:
+From the above, it is clear that the matching probability depends only on the state transition energy, not on the free energy of the metastable states. If we assume there is one dominant bias $\Delta T_{n^*}$, then this equation can be approximated as:
 \begin{equation}
  P_{m} \approx \frac{1}{1+exp(-\Delta T_{n^*})}
 \end{equation}
@@ -69,78 +71,66 @@ From the above, it is clear that the matching probability depends only on the st
 As figure shows, we analyze each process energy change:\newline
 $\left\{
 \begin{tabular}{l}
-for the PAM state (i = 0) we have $\Delta_0=\Delta PAM$\\
-for a partial R-loop we have $\Delta_i = \Delta_C$ and $\Delta_i = -\Delta_I$ if mismatched\\
+for the PAM position (i = 0) we have $\Delta_0=\Delta PAM$\\
+for a partial R-loop we have $\Delta_i = \Delta_M$ if matched and $\Delta_i = -\Delta_U$ mismatched\\
 \end{tabular}
 \right.$
 
 \begin{equation}
-\Delta {T_n} = {\Delta _{PAM}} + {n_C}(n){\Delta _C} - (n - {n_C}){\Delta _I} - {\delta _{n,N}}{\Delta _{clv}};\:n = 0...N
+\Delta {T_n} = {\Delta _{PAM}} + {n_M}(n){\Delta _M} - (n - {n_M}){\Delta _U} - {\delta _{n,N}}{\Delta _{clv}};\:n = 0...N
 \end{equation}
-where $\delta_{n,N}$ represents the Kronecker delta:
+where $n_M$ is the number of matches, $\Delta _{clv}$ is the energy change of cleavage after the process of matching is finished.\\
+$\delta_{n,N}$ represents the Kronecker delta:
 $\delta_{n,N}$=$\left\{\begin{array}{l}1, n=N;\\
 0, n\neq N.
 \end{array}
-\right.$\\
+\right.$
+
 For PAM independent systems (such as Cas13), we instead use:
 \begin{equation}
-\Delta {T_n} = {n_C}(n){\Delta _C} - (n - {n_C}){\Delta _I} - {\delta _{n,N}}{\Delta _{clv}};\:n = 0...N
+\Delta {T_n} = {n_M}(n){\Delta _M} - (n - {n_M}){\Delta _U} - {\delta _{n,N}}{\Delta _{clv}};\:n = 0...N
 \end{equation}
 
-To sum up, the cleavage possibility mainly relies on the free energy change, and PAM appears as a significant energy decline.
+To sum up, the matching probability mainly relies on the free energy change, and PAM appears as a significant energy decline.
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{AT}
-	\caption{AT}
+	\caption{Hydrogen bonds between AT}
 	\label{fig:6}
 \end{figure}
 \begin{figure}[h]
 	\centering
 	\includegraphics[width=0.7\linewidth]{CG}
-	\caption{CG}
+	\caption{Hydrogen bonds between CG}
 	\label{fig:7}
 \end{figure}
 
-So the kinetic module set up a form to regress the relationship between cleavage and the numbers of nucleotide matches and mismatches.
-In consideration of this problem more carefully, the cleavage possibility becomes equal to analysis energy change, and we know the binding energy of A/T and C/G is different due to the different hydrogen bond between them. However, in appearing kinetic model, research tend to describe them in a rough definition as “matched base pairs”, and the energy incline in C/G is approximately 1.5 folds as A/T. Similarly, the mismatch has more difference because the size of nucleotides is various. Hence, the combination of the mismatched base pair was classified by group volume, i.e. two pyrimidines (such as C/T, “L”), pyrimidine and purine (such as C/A, “M”), two purine (such as G/T, “S”). Hence, our possibility can be calculated using the following formation.
+The kinetic module sets up a framework to regress the relationship between matching probability and the numbers of nucleotide matches and mismatches. In consideration of this problem more carefully, the matching probability becomes equal to the analysis of energy change, because we know the binding energy of A/T and C/G is different due to the different hydrogen bonds between them (figure \ref{fig:6} and \ref{fig:7}), and the energy decrease in C/G is approximately 1.5 folds as A/T. Similarly, the mismatch has more types of variance because the sizes of nucleotides are various. Hence, the types of the mismatched base pair are classified by group volume, i.e., two pyrimidines (such as C/T, “L”), pyrimidine and purine (such as C/A, “M”), two purine (such as G/T, “S”). Hence, the probability can be calculated using the following equation:
 \begin{equation}
-P_{clv}=\frac{1}{1+e^{-n_1\Delta_{A/T}-n_2\Delta_{C/G}+n_3\Delta_{L}+n_4\Delta_{M}+n_5\Delta_{S}}}
+P_{m}=\frac{1}{1+e^{-n_1\Delta_{A/T}-n_2\Delta_{C/G}+n_3\Delta_{L}+n_4\Delta_{M}+n_5\Delta_{S}}}
 \end{equation}
 
-\subsection{Optimization module}
-It is a common sense that experimental results are facts, but theoretical results are only conjectures. From kinetic module, we can get an output, which is the cleavage possibility. The parameter we choose only aims to make results have discrimination, while it’s not quantitative. And in a cleavage experiment, we only have two outcomes, successful and unsuccessful. To make our prediction possibility more approximate to experiment, we regard this as a regression problem.
+\subsection{Parameter Optimization}
+From the kinetic module, we can get an output, which is the matching probability. It needs to be noticed that the parameters we choose only aim to make results well discriminated; and in a cleavage experiment, we only have two outcomes, successful and unsuccessful. 
 
-Here, the method we choose is stochastic gradient descent (SGD) and cross entropy. And their principle can be concluded as follows.
+To make our predictions from the model more approximate to experiment(facts), we regard it as a regression problem and implement parameter optimization. Here, the method we choose is stochastic gradient descent (SGD) and cross entropy. Their principles can be concluded as follows:
 \begin{equation}
 \theta  = \theta  - \eta {\nabla _\theta }J({x^{(i)}},{y^{(i)}},\theta )
 \end{equation}
-	
 \begin{equation}
 loss = \sum\limits_i {{y_i}\ln {y_i}}
 \end{equation}
-where $\theta$ means the parameters array and J means the loss function. 
+where $\theta$ means the parameter array and J means the loss function. 
 
-Considering the difference in gradient calculation, we use difference to substitute differential aim to accelerate operating speed.\par
+Considering the difficulty in gradient calculation, we substitute differential term with difference term to accelerate operating speed.\par
 \begin{equation}
 \frac{{dy}}{{dx}} \approx \frac{{\Delta y}}{{\Delta x}}{\rm{ = }}\frac{{y(x + \delta x) - y(x)}}{{\delta x}}
 \end{equation}
 
-By using this simple method, our model can be more vibrant, updating using newest data and becoming more reliable.
+By using this simple method, our model can be more vibrant and more reliable with the ability of updating using newest data.
 
-\subsection{Pre-selector}
-It’s obviously that the algorithm is too complex to applying in slide in a huge DNA array. To solve this problem, we use a pre-selector to get some candidates and use previous model to compare them so that we could get a greatest target.\par
-And here this pre-selector structure is very simple.
-Considering use this map to reflect the similarity between target and full DNA.
+\subsection{Generating sgRNA Candidates}
+Meanwhile, we designed a program to generate all the sgRNA candidates for a target gene, and combined with the previous model, we can compare and rank them.
 
-\begin{equation}
-f({a_{{\rm{target}}}} - {a_{{\rm{full}}}}) = {\bf{x}} = ({x_i})
-\end{equation}
-
-\begin{equation}{x_i} = \left\{ {\begin{array}{*{20}{c}}
-{1,\quad \quad matched}  \\
-{0,\quad mismatched}  \\
-\end{array}} \right.
-\end{equation}
-
-Here, we use PAM as an input and collect the array which contain the same beginning code as PAM.
+The principle of the program  is very simple. We use PAM as the input and collect the arrays with a certain length which contain the same beginning code as PAM.
 
