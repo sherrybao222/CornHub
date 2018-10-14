@@ -9,12 +9,12 @@ SimBiology Toolbox provides functions for modeling, simulating, and analyzing bi
 	\caption{Reaction map generated from the reaction sets above by SimBiology Toolbox}
 \end{figure}
 
-COPASI is freeware developed with the collaboration of VBI and EMLR. It provides almost the same functions as SimBiology, though not quite powerful. However, compared with SimBiology, it provides a friendly user interface for model analysis, such as parameter estimation, and parameter scan.
+
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=10cm]{smuRFP}
-	\caption{Simulation of smURFP production as a function of time by COPASI}
+	\includegraphics[width=10cm]{11}
+	\caption{Simulation of smURFP production as a function of time by MATLAB}
 \end{figure}
 
 Through the figure, we can see that the smURFP can gradually increase and reach a steady state after a period in the presence of arsenic ions.
@@ -31,7 +31,7 @@ Robustness analysis can also pinpoint which reactions/parameters that are import
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[height=4cm]{s1.jpg}
 		\caption{sensitivity of k1}
-	\end{subfigure}%
+	\end{subfigure}
 	\begin{subfigure}{0.5\textwidth}
 		\includegraphics[height=4cm]{s2.jpg}
 		\caption{sensitivity of k2}
@@ -106,15 +106,15 @@ Robustness analysis can also pinpoint which reactions/parameters that are import
 	\end{subfigure}
 	\caption{Sensitivity analysis of kd1-kd8}
 \end{figure}
-
+Note:The ordinate axis represents the sensitivity S, and the abscissa axis is the parameter k for which we want to evaluate the sensitivity.
 \subsection{Application of the model}
-Since the goal of our project is to increase the sensitivity of biosensors by introducing a complex of dCas9-RNAP and sgRNA, and one of the purposes of our model is to explore whether this complex is effective. So we assume a reasonable and large enough concentration value for this complex. We use the concentration of glyceraldehyde-3-phosphate dehydrogenase A as the assumed concentration. Glyceraldehyde 3 phosphate dehydrogenase A (gapA) is a crucial enzyme in the glycolytic pathway, and the gene encoding this enzyme is a housekeeping gene in E. coli cells with high expression levels. We find in the literature that the protein mass of gapA is 48645fg/cell, and its molecular weight is 35492 Da. The amount of abundance of Glyceraldehyde 3 phosphate dehydrogenase A protein per cell can be calculated as follows:
+Since the goal of our project is to increase the sensitivity of biosensors by introducing a complex of dCas9-RNAP and sgRNA, and one of the purposes of our model is to explore whether this complex is effective. So we assume a reasonable and large enough concentration value for this complex. We use the concentration of glyceraldehyde-3-phosphate dehydrogenase A as the assumed concentration. Glyceraldehyde 3 phosphate dehydrogenase A (gapA) is a crucial enzyme in the glycolytic pathway, and the gene encoding this enzyme is a housekeeping gene in E. coli cells with high expression levels. We find in the literature that the protein mass of gapA is 48645fg/cell, and its molecular weight is 35492 Da.\cite{Molecular \& Cellular Proteomics} The amount of abundance of Glyceraldehyde 3 phosphate dehydrogenase A protein per cell can be calculated as follows:
 
 \begin{displaymath}
 	n=\frac{m}{M}=\frac{48645*10^{-15}g}{35492g/mol}=1.37*10^{-15}mol
 \end{displaymath}
 
-As for the size of E. coli, we found relevant data from the literature, as the figure below shows.
+As for the size of E. coli, we found relevant data from the literature, as the figure below shows.\cite{grossman1982changes}
 
 \begin{figure}[!htbp]
 	\centering
