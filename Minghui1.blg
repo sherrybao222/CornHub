@@ -17,50 +17,50 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: Minghui1-blx.bib
-Warning--I didn't find a database entry for "pola2018novel"
+Database file #2: reference.bib
 Warning--I didn't find a database entry for "bikard2013programmable"
 Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 1 entry,
+You've used 5 entries,
             6256 wiz_defined-function locations,
-            1176 strings with 8563 characters,
-and the built_in function-call counts, 1203 in all, are:
-= -- 58
-> -- 52
-< -- 1
-+ -- 37
-- -- 22
-* -- 24
-:= -- 275
+            1206 strings with 9750 characters,
+and the built_in function-call counts, 40957 in all, are:
+= -- 3367
+> -- 577
+< -- 122
++ -- 1188
+- -- 228
+* -- 3117
+:= -- 4857
 add.period$ -- 0
-call.type$ -- 1
-change.case$ -- 0
+call.type$ -- 5
+change.case$ -- 77
 chr.to.int$ -- 30
-cite$ -- 0
-duplicate$ -- 11
-empty$ -- 86
-format.name$ -- 0
-if$ -- 265
+cite$ -- 8
+duplicate$ -- 4035
+empty$ -- 3561
+format.name$ -- 405
+if$ -- 8097
 int.to.chr$ -- 0
-int.to.str$ -- 0
+int.to.str$ -- 12
 missing$ -- 0
-newline$ -- 20
-num.names$ -- 0
-pop$ -- 40
+newline$ -- 229
+num.names$ -- 209
+pop$ -- 1566
 preamble$ -- 1
-purify$ -- 0
+purify$ -- 129
 quote$ -- 0
-skip$ -- 67
+skip$ -- 838
 stack$ -- 0
-substring$ -- 110
-swap$ -- 1
-text.length$ -- 14
-text.prefix$ -- 0
+substring$ -- 6429
+swap$ -- 794
+text.length$ -- 116
+text.prefix$ -- 3
 top$ -- 1
-type$ -- 22
+type$ -- 158
 warning$ -- 0
-while$ -- 45
+while$ -- 573
 width$ -- 0
-write$ -- 20
-(There were 2 warnings)
+write$ -- 225
+(There was 1 warning)
