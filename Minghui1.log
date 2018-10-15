@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.3)  15 OCT 2018 15:05
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2018.2.3)  15 OCT 2018 15:17
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1123,13 +1123,6 @@ File: 2.png Graphic file (type png)
 Package pdftex.def Info: 2.png used on input line 46.
 (pdftex.def)             Requested size: 341.43306pt x 192.06801pt.
 
-
-LaTeX Warning: Citation 'bikard2013programmable' on page 2 undefined on input l
-ine 50.
-
-LaTeX Font Info:    Font shape `OT1/iwona/bx/n' in size <10> not available
-(Font)              Font shape `OT1/iwona/b/n' tried instead on input line 50.
-
 Underfull \hbox (badness 10000) in paragraph at lines 50--51
 
  []
@@ -1282,13 +1275,13 @@ pdfTeX warning (ext4): destination with the same identifier (name{equation.2.25
                                                   \fi \fi 
 l.4 S
      imBiology Toolbox provides functions for modeling, simulating, and anal...
-] [5] <screenshot003.png, id=122, 458.21187pt x 330.73563pt>
+] [5] <screenshot003.png, id=124, 458.21187pt x 330.73563pt>
 File: screenshot003.png Graphic file (type png)
 
 <use screenshot003.png>
 Package pdftex.def Info: screenshot003.png used on input line 8.
 (pdftex.def)             Requested size: 284.52756pt x 205.37694pt.
- <11.png, id=123, 632.3625pt x 474.27188pt>
+ <11.png, id=125, 632.3625pt x 474.27188pt>
 File: 11.png Graphic file (type png)
 
 <use 11.png>
@@ -1300,61 +1293,61 @@ cate ignored
 <to be read again> 
                    \relax 
 l.26 \begin{equation}
-                      <tx1.png, id=130, 632.3625pt x 474.27188pt>
+                      <tx1.png, id=132, 632.3625pt x 474.27188pt>
 File: tx1.png Graphic file (type png)
 
 <use tx1.png>
 Package pdftex.def Info: tx1.png used on input line 36.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
- <tl1.png, id=131, 632.3625pt x 474.27188pt>
+ <tl1.png, id=133, 632.3625pt x 474.27188pt>
 File: tl1.png Graphic file (type png)
  <use tl1.png>
 Package pdftex.def Info: tl1.png used on input line 40.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<tx2.png, id=132, 632.3625pt x 474.27188pt>
+<tx2.png, id=134, 632.3625pt x 474.27188pt>
 File: tx2.png Graphic file (type png)
  <use tx2.png>
 Package pdftex.def Info: tx2.png used on input line 44.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<tl2.png, id=133, 632.3625pt x 474.27188pt>
+<tl2.png, id=135, 632.3625pt x 474.27188pt>
 File: tl2.png Graphic file (type png)
  <use tl2.png>
 Package pdftex.def Info: tl2.png used on input line 48.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<tx3.png, id=134, 632.3625pt x 474.27188pt>
+<tx3.png, id=136, 632.3625pt x 474.27188pt>
 File: tx3.png Graphic file (type png)
  <use tx3.png>
 Package pdftex.def Info: tx3.png used on input line 52.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<tl3.png, id=135, 632.3625pt x 474.27188pt>
+<tl3.png, id=137, 632.3625pt x 474.27188pt>
 File: tl3.png Graphic file (type png)
  <use tl3.png>
 Package pdftex.def Info: tl3.png used on input line 56.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<tx4.png, id=136, 632.3625pt x 474.27188pt>
+<tx4.png, id=138, 632.3625pt x 474.27188pt>
 File: tx4.png Graphic file (type png)
  <use tx4.png>
 Package pdftex.def Info: tx4.png used on input line 60.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<b1.png, id=137, 632.3625pt x 474.27188pt>
+<b1.png, id=139, 632.3625pt x 474.27188pt>
 File: b1.png Graphic file (type png)
  <use b1.png>
 Package pdftex.def Info: b1.png used on input line 64.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<b2.png, id=138, 632.3625pt x 474.27188pt>
+<b2.png, id=140, 632.3625pt x 474.27188pt>
 File: b2.png Graphic file (type png)
  <use b2.png>
 Package pdftex.def Info: b2.png used on input line 68.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<b3.png, id=139, 632.3625pt x 474.27188pt>
+<b3.png, id=141, 632.3625pt x 474.27188pt>
 File: b3.png Graphic file (type png)
  <use b3.png>
 Package pdftex.def Info: b3.png used on input line 72.
@@ -1366,85 +1359,85 @@ Overfull \vbox (60.0551pt too high) has occurred while \output is active []
 [8 <./tx1.png (PNG copy)> <./tl1.png (PNG copy)> <./tx2.png (PNG copy)> <./tl2.
 png (PNG copy)> <./tx3.png (PNG copy)> <./tl3.png (PNG copy)> <./tx4.png (PNG c
 opy)> <./b1.png (PNG copy)> <./b2.png (PNG copy)> <./b3.png (PNG copy)>]
-<b4.png, id=150, 632.3625pt x 474.27188pt>
+<b4.png, id=152, 632.3625pt x 474.27188pt>
 File: b4.png Graphic file (type png)
  <use b4.png>
 Package pdftex.def Info: b4.png used on input line 79.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<b5.png, id=151, 632.3625pt x 474.27188pt>
+<b5.png, id=153, 632.3625pt x 474.27188pt>
 File: b5.png Graphic file (type png)
  <use b5.png>
 Package pdftex.def Info: b5.png used on input line 83.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<b6.png, id=152, 632.3625pt x 474.27188pt>
+<b6.png, id=154, 632.3625pt x 474.27188pt>
 File: b6.png Graphic file (type png)
  <use b6.png>
 Package pdftex.def Info: b6.png used on input line 87.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d1.png, id=153, 632.3625pt x 474.27188pt>
+<d1.png, id=155, 632.3625pt x 474.27188pt>
 File: d1.png Graphic file (type png)
  <use d1.png>
 Package pdftex.def Info: d1.png used on input line 91.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d2.png, id=154, 632.3625pt x 474.27188pt>
+<d2.png, id=156, 632.3625pt x 474.27188pt>
 File: d2.png Graphic file (type png)
  <use d2.png>
 Package pdftex.def Info: d2.png used on input line 95.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d3.png, id=155, 632.3625pt x 474.27188pt>
+<d3.png, id=157, 632.3625pt x 474.27188pt>
 File: d3.png Graphic file (type png)
  <use d3.png>
 Package pdftex.def Info: d3.png used on input line 99.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d4.png, id=156, 632.3625pt x 474.27188pt>
+<d4.png, id=158, 632.3625pt x 474.27188pt>
 File: d4.png Graphic file (type png)
  <use d4.png>
 Package pdftex.def Info: d4.png used on input line 103.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d5.png, id=157, 632.3625pt x 474.27188pt>
+<d5.png, id=159, 632.3625pt x 474.27188pt>
 File: d5.png Graphic file (type png)
  <use d5.png>
 Package pdftex.def Info: d5.png used on input line 107.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d6.png, id=158, 632.3625pt x 474.27188pt>
+<d6.png, id=160, 632.3625pt x 474.27188pt>
 File: d6.png Graphic file (type png)
  <use d6.png>
 Package pdftex.def Info: d6.png used on input line 114.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d7.png, id=159, 632.3625pt x 474.27188pt>
+<d7.png, id=161, 632.3625pt x 474.27188pt>
 File: d7.png Graphic file (type png)
  <use d7.png>
 Package pdftex.def Info: d7.png used on input line 118.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d8.png, id=160, 632.3625pt x 474.27188pt>
+<d8.png, id=162, 632.3625pt x 474.27188pt>
 File: d8.png Graphic file (type png)
  <use d8.png>
 Package pdftex.def Info: d8.png used on input line 122.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d9.png, id=161, 632.3625pt x 474.27188pt>
+<d9.png, id=163, 632.3625pt x 474.27188pt>
 File: d9.png Graphic file (type png)
  <use d9.png>
 Package pdftex.def Info: d9.png used on input line 126.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d10.png, id=162, 632.3625pt x 474.27188pt>
+<d10.png, id=164, 632.3625pt x 474.27188pt>
 File: d10.png Graphic file (type png)
  <use d10.png>
 Package pdftex.def Info: d10.png used on input line 130.
 (pdftex.def)             Requested size: 151.74115pt x 113.81102pt.
 
-<d11.png, id=163, 632.3625pt x 474.27188pt>
+<d11.png, id=165, 632.3625pt x 474.27188pt>
 File: d11.png Graphic file (type png)
  <use d11.png>
 Package pdftex.def Info: d11.png used on input line 134.
@@ -1454,7 +1447,7 @@ Package pdftex.def Info: d11.png used on input line 134.
 <./d5.png (PNG copy)>] [10 <./d6.png (PNG copy)> <./d7.png (PNG copy)> <./d8.pn
 g (PNG copy)> <./d9.png (PNG copy)> <./d10.png (PNG copy)> <./d11.png (PNG copy
 )>]
-<dc.png, id=178, 476.5002pt x 439.8834pt>
+<dc.png, id=180, 476.5002pt x 439.8834pt>
 File: dc.png Graphic file (type png)
  <use dc.png>
 Package pdftex.def Info: dc.png used on input line 152.
@@ -1471,18 +1464,18 @@ Overfull \hbox (45.67717pt too wide) detected at line 159
 4 \OMS/cmsy/m/n/10 ^^C \OT1/cmr/m/n/10 10[]\OML/cmm/m/it/10 L
  []
 
-<23.png, id=179, 632.3625pt x 474.27188pt>
+<23.png, id=181, 632.3625pt x 474.27188pt>
 File: 23.png Graphic file (type png)
  <use 23.png>
 Package pdftex.def Info: 23.png used on input line 170.
 (pdftex.def)             Requested size: 199.16928pt x 149.37471pt.
 
-<21.png, id=180, 632.3625pt x 474.27188pt>
+<21.png, id=182, 632.3625pt x 474.27188pt>
 File: 21.png Graphic file (type png)
  <use 21.png>
 Package pdftex.def Info: 21.png used on input line 178.
 (pdftex.def)             Requested size: 199.16928pt x 149.37471pt.
- [11 <./dc.png> <./23.png (PNG copy)>] <22.png, id=189, 632.3625pt x 474.27188p
+ [11 <./dc.png> <./23.png (PNG copy)>] <22.png, id=191, 632.3625pt x 474.27188p
 t>
 File: 22.png Graphic file (type png)
  <use 22.png>
@@ -1498,28 +1491,19 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 65.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 65.
 Package rerunfilecheck Info: File `Minghui1.out' has not changed.
 (rerunfilecheck)             Checksum: F76430481FEFBB17DF88CD67ACF9FD74;482.
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package biblatex Warning: Please (re)run BibTeX on the file(s):
-(biblatex)                Minghui1
-(biblatex)                and rerun LaTeX afterwards.
-
 Package logreq Info: Writing requests to 'Minghui1.run.xml'.
 \openout1 = `Minghui1.run.xml'.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 65.
  ) 
 Here is how much of TeX's memory you used:
- 17484 strings out of 492995
- 280954 string characters out of 6132705
+ 17485 strings out of 492995
+ 281046 string characters out of 6132705
  582193 words of memory out of 5000000
  20687 multiletter control sequences out of 15000+600000
- 48811 words of font info for 69 fonts, out of 8000000 for 9000
+ 45789 words of font info for 68 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 45i,14n,45p,944b,1337s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 45i,14n,45p,944b,1335s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc}</usr/
 local/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/l
 ocal/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/loc
@@ -1533,10 +1517,10 @@ ive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive
 /texmf-dist/fonts/type1/nowacki/iwona/iwonab.pfb></usr/local/texlive/2017/texmf
 -dist/fonts/type1/nowacki/iwona/iwonar.pfb></usr/local/texlive/2017/texmf-dist/
 fonts/type1/nowacki/iwona/iwonari.pfb>
-Output written on Minghui1.pdf (13 pages, 1374952 bytes).
+Output written on Minghui1.pdf (13 pages, 1374906 bytes).
 PDF statistics:
- 260 PDF objects out of 1000 (max. 8388607)
- 196 compressed objects within 2 object streams
- 78 named destinations out of 1000 (max. 500000)
+ 263 PDF objects out of 1000 (max. 8388607)
+ 199 compressed objects within 2 object streams
+ 79 named destinations out of 1000 (max. 500000)
  225 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -83,6 +83,61 @@
     \field{year}{2018}
   \endentry
 
+  \entry{bikard2013programmable}{article}{}
+    \name{author}{6}{}{%
+      {{hash=BD}{%
+         family={Bikard},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=JW}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={Wenyan},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Samai},
+         familyi={S\bibinitperiod},
+         given={Poulami},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Hochschild},
+         familyi={H\bibinitperiod},
+         given={Ann},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=ZF}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Feng},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=MLA}{%
+         family={Marraffini},
+         familyi={M\bibinitperiod},
+         given={Luciano\bibnamedelima A},
+         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{BD+1}
+    \strng{fullhash}{BDJWSPHAZFMLA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{15}
+    \field{pages}{7429\bibrangedash 7437}
+    \field{title}{Programmable repression and activation of bacterial gene
+  expression using an engineered CRISPR-Cas system}
+    \field{volume}{41}
+    \field{journaltitle}{Nucleic acids research}
+    \field{year}{2013}
+  \endentry
+
   \entry{berset2017mechanistic}{article}{}
     \name{author}{5}{}{%
       {{hash=BY}{%
