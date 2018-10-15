@@ -1,0 +1,333 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.8 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\sortlist[entry]{none/global/}
+  \entry{pola2018novel}{article}{}
+    \name{author}{8}{}{%
+      {{hash=PLL}{%
+         family={Pola-L{\'o}pez},
+         familyi={P\bibinitperiod-L\bibinitperiod},
+         given={LA},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=CAJ}{%
+         family={Camas-Anzueto},
+         familyi={C\bibinitperiod-A\bibinitperiod},
+         given={JL},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MAA}{%
+         family={Mart{\'\i}nez-Antonio},
+         familyi={M\bibinitperiod-A\bibinitperiod},
+         given={A},
+         giveni={A},
+      }}%
+      {{hash=LHM}{%
+         family={Luj{\'a}n-Hidalgo},
+         familyi={L\bibinitperiod-H\bibinitperiod},
+         given={MC},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=ASG}{%
+         family={Anzueto-S{\'a}nchez},
+         familyi={A\bibinitperiod-S\bibinitperiod},
+         given={G},
+         giveni={G},
+      }}%
+      {{hash=RVV}{%
+         family={Ru{\'\i}z-Valdiviezo},
+         familyi={R\bibinitperiod-V\bibinitperiod},
+         given={VM},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=GCR}{%
+         family={Grajales-Couti{\~n}o},
+         familyi={G\bibinitperiod-C\bibinitperiod},
+         given={R},
+         giveni={R},
+      }}%
+      {{hash=GJC}{%
+         family={Gonz{\'a}lez},
+         familyi={G\bibinitperiod},
+         given={JH\bibnamedelima Casta{\~n}{\'o}n},
+         giveni={J\bibinitperiod\bibinitdelim C\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Elsevier}%
+    }
+    \strng{namehash}{PLL+1}
+    \strng{fullhash}{PLLCAJMAALHMASGRVVGCRGJC1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{pages}{1061\bibrangedash 1068}
+    \field{title}{Novel arsenic biosensor “POLA” obtained by a genetically
+  modified E. coli bioreporter cell}
+    \field{volume}{254}
+    \field{journaltitle}{Sensors and Actuators B: Chemical}
+    \field{year}{2018}
+  \endentry
+
+  \entry{bikard2013programmable}{article}{}
+    \name{author}{6}{}{%
+      {{hash=BD}{%
+         family={Bikard},
+         familyi={B\bibinitperiod},
+         given={David},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=JW}{%
+         family={Jiang},
+         familyi={J\bibinitperiod},
+         given={Wenyan},
+         giveni={W\bibinitperiod},
+      }}%
+      {{hash=SP}{%
+         family={Samai},
+         familyi={S\bibinitperiod},
+         given={Poulami},
+         giveni={P\bibinitperiod},
+      }}%
+      {{hash=HA}{%
+         family={Hochschild},
+         familyi={H\bibinitperiod},
+         given={Ann},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=ZF}{%
+         family={Zhang},
+         familyi={Z\bibinitperiod},
+         given={Feng},
+         giveni={F\bibinitperiod},
+      }}%
+      {{hash=MLA}{%
+         family={Marraffini},
+         familyi={M\bibinitperiod},
+         given={Luciano\bibnamedelima A},
+         giveni={L\bibinitperiod\bibinitdelim A\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Oxford University Press}%
+    }
+    \strng{namehash}{BD+1}
+    \strng{fullhash}{BDJWSPHAZFMLA1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{15}
+    \field{pages}{7429\bibrangedash 7437}
+    \field{title}{Programmable repression and activation of bacterial gene
+  expression using an engineered CRISPR-Cas system}
+    \field{volume}{41}
+    \field{journaltitle}{Nucleic acids research}
+    \field{year}{2013}
+  \endentry
+
+  \entry{berset2017mechanistic}{article}{}
+    \name{author}{5}{}{%
+      {{hash=BY}{%
+         family={Berset},
+         familyi={B\bibinitperiod},
+         given={Yves},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=MD}{%
+         family={Merulla},
+         familyi={M\bibinitperiod},
+         given={Davide},
+         giveni={D\bibinitperiod},
+      }}%
+      {{hash=JA}{%
+         family={Joublin},
+         familyi={J\bibinitperiod},
+         given={Aurélie},
+         giveni={A\bibinitperiod},
+      }}%
+      {{hash=HV}{%
+         family={Hatzimanikatis},
+         familyi={H\bibinitperiod},
+         given={Vassily},
+         giveni={V\bibinitperiod},
+      }}%
+      {{hash=VDMJR}{%
+         family={Van Der\bibnamedelima Meer},
+         familyi={V\bibinitperiod\bibinitdelim D\bibinitperiod\bibinitdelim
+  M\bibinitperiod},
+         given={Jan\bibnamedelima R},
+         giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ACS Publications}%
+    }
+    \strng{namehash}{BY+1}
+    \strng{fullhash}{BYMDJAHVVDMJR1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{5}
+    \field{pages}{862\bibrangedash 874}
+    \field{title}{Mechanistic Modeling of Genetic Circuits for ArsR Arsenic
+  Regulation}
+    \field{volume}{6}
+    \field{journaltitle}{ACS synthetic biology}
+    \field{year}{2017}
+  \endentry
+
+  \entry{karzbrun2011coarse}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KE}{%
+         family={Karzbrun},
+         familyi={K\bibinitperiod},
+         given={Eyal},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Shin},
+         familyi={S\bibinitperiod},
+         given={Jonghyeon},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BZRH}{%
+         family={Bar-Ziv},
+         familyi={B\bibinitperiod-Z\bibinitperiod},
+         given={Roy\bibnamedelima H},
+         giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=NV}{%
+         family={Noireaux},
+         familyi={N\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {APS}%
+    }
+    \strng{namehash}{KE+1}
+    \strng{fullhash}{KESJBZRHNV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{048104}
+    \field{title}{Coarse-grained dynamics of protein synthesis in a cell-free
+  system}
+    \field{volume}{106}
+    \field{journaltitle}{Physical review letters}
+    \field{year}{2011}
+  \endentry
+
+  \entry{ishihama2005exponentially}{article}{}
+    \name{author}{7}{}{%
+      {{hash=IY}{%
+         family={Ishihama},
+         familyi={I\bibinitperiod},
+         given={Yasushi},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=OY}{%
+         family={Oda},
+         familyi={O\bibinitperiod},
+         given={Yoshiya},
+         giveni={Y\bibinitperiod},
+      }}%
+      {{hash=TT}{%
+         family={Tabata},
+         familyi={T\bibinitperiod},
+         given={Tsuyoshi},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=ST}{%
+         family={Sato},
+         familyi={S\bibinitperiod},
+         given={Toshitaka},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=NT}{%
+         family={Nagasu},
+         familyi={N\bibinitperiod},
+         given={Takeshi},
+         giveni={T\bibinitperiod},
+      }}%
+      {{hash=RJ}{%
+         family={Rappsilber},
+         familyi={R\bibinitperiod},
+         given={Juri},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=MM}{%
+         family={Mann},
+         familyi={M\bibinitperiod},
+         given={Matthias},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {ASBMB}%
+    }
+    \strng{namehash}{IY+1}
+    \strng{fullhash}{IYOYTTSTNTRJMM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{9}
+    \field{pages}{1265\bibrangedash 1272}
+    \field{title}{Exponentially modified protein abundance index (emPAI) for
+  estimation of absolute protein amount in proteomics by the number of
+  sequenced peptides per protein}
+    \field{volume}{4}
+    \field{journaltitle}{Molecular \& Cellular Proteomics}
+    \field{year}{2005}
+  \endentry
+
+  \entry{grossman1982changes}{article}{}
+    \name{author}{3}{}{%
+      {{hash=GN}{%
+         family={Grossman},
+         familyi={G\bibinitperiod},
+         given={Nili},
+         giveni={N\bibinitperiod},
+      }}%
+      {{hash=REZ}{%
+         family={Ron},
+         familyi={R\bibinitperiod},
+         given={Eliora\bibnamedelima Z},
+         giveni={E\bibinitperiod\bibinitdelim Z\bibinitperiod},
+      }}%
+      {{hash=WCL}{%
+         family={Woldringh},
+         familyi={W\bibinitperiod},
+         given={Conrad\bibnamedelima L},
+         giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {Am Soc Microbiol}%
+    }
+    \strng{namehash}{GNREZWCL1}
+    \strng{fullhash}{GNREZWCL1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{1}
+    \field{pages}{35\bibrangedash 41}
+    \field{title}{Changes in cell dimensions during amino acid starvation of
+  Escherichia coli.}
+    \field{volume}{152}
+    \field{journaltitle}{Journal of bacteriology}
+    \field{year}{1982}
+  \endentry
+\endsortlist
+\endinput
