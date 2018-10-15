@@ -22,45 +22,45 @@ Warning--I didn't find a database entry for "bikard2013programmable"
 Biblatex version: 3.3
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
-You've used 5 entries,
+You've used 6 entries,
             6256 wiz_defined-function locations,
-            1206 strings with 9750 characters,
-and the built_in function-call counts, 40957 in all, are:
-= -- 3367
-> -- 577
-< -- 122
-+ -- 1188
-- -- 228
-* -- 3117
-:= -- 4857
+            1214 strings with 9948 characters,
+and the built_in function-call counts, 47969 in all, are:
+= -- 3901
+> -- 676
+< -- 142
++ -- 1383
+- -- 264
+* -- 3651
+:= -- 5636
 add.period$ -- 0
-call.type$ -- 5
-change.case$ -- 77
+call.type$ -- 6
+change.case$ -- 88
 chr.to.int$ -- 30
-cite$ -- 8
-duplicate$ -- 4035
-empty$ -- 3561
-format.name$ -- 405
-if$ -- 8097
+cite$ -- 10
+duplicate$ -- 4806
+empty$ -- 4203
+format.name$ -- 483
+if$ -- 9480
 int.to.chr$ -- 0
-int.to.str$ -- 12
+int.to.str$ -- 15
 missing$ -- 0
-newline$ -- 229
-num.names$ -- 209
-pop$ -- 1566
+newline$ -- 271
+num.names$ -- 253
+pop$ -- 1926
 preamble$ -- 1
-purify$ -- 129
+purify$ -- 149
 quote$ -- 0
-skip$ -- 838
+skip$ -- 990
 stack$ -- 0
-substring$ -- 6429
-swap$ -- 794
-text.length$ -- 116
+substring$ -- 7378
+swap$ -- 959
+text.length$ -- 137
 text.prefix$ -- 3
 top$ -- 1
-type$ -- 158
+type$ -- 192
 warning$ -- 0
-while$ -- 573
+while$ -- 669
 width$ -- 0
-write$ -- 225
+write$ -- 266
 (There was 1 warning)

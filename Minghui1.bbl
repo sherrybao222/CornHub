@@ -133,6 +133,49 @@
     \field{year}{2017}
   \endentry
 
+  \entry{karzbrun2011coarse}{article}{}
+    \name{author}{4}{}{%
+      {{hash=KE}{%
+         family={Karzbrun},
+         familyi={K\bibinitperiod},
+         given={Eyal},
+         giveni={E\bibinitperiod},
+      }}%
+      {{hash=SJ}{%
+         family={Shin},
+         familyi={S\bibinitperiod},
+         given={Jonghyeon},
+         giveni={J\bibinitperiod},
+      }}%
+      {{hash=BZRH}{%
+         family={Bar-Ziv},
+         familyi={B\bibinitperiod-Z\bibinitperiod},
+         given={Roy\bibnamedelima H},
+         giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+      }}%
+      {{hash=NV}{%
+         family={Noireaux},
+         familyi={N\bibinitperiod},
+         given={Vincent},
+         giveni={V\bibinitperiod},
+      }}%
+    }
+    \list{publisher}{1}{%
+      {APS}%
+    }
+    \strng{namehash}{KE+1}
+    \strng{fullhash}{KESJBZRHNV1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{number}{4}
+    \field{pages}{048104}
+    \field{title}{Coarse-grained dynamics of protein synthesis in a cell-free
+  system}
+    \field{volume}{106}
+    \field{journaltitle}{Physical review letters}
+    \field{year}{2011}
+  \endentry
+
   \entry{ishihama2005exponentially}{article}{}
     \name{author}{7}{}{%
       {{hash=IY}{%
