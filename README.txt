@@ -8,4 +8,4 @@ By comparing the "whole model" with the "without CRISPR" output, the significant
 
 The sensitivity file is a sensitivity analysis of the parameters involved in the whole model.
 
- The assumed concentration file is a simulation of the biosensor in the case of a hypothetical concentration of dCas9-RNAP.
+The assumed concentration file is a simulation of the biosensor in the case of a hypothetical concentration of dCas9-RNAP.
