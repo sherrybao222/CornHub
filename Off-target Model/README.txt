@@ -6,4 +6,8 @@ possible: for this function, its input is the target gene and the genome, and it
 
 loss_function: used for calculating loss function;
 
-training: used to optimize the parameter based on experimental data.
+training: used to optimize the parameter based on experimental data;
+
+re0: similar to possible.m function while mainly for generating the result figure;
+
+preselector: generating sgRNA candidates.
